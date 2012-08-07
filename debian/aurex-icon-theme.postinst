@@ -6,7 +6,7 @@ case "$1" in
 	cp -aus /usr/share/icons/Faience-Azur/* /usr/share/icons/aurex
 	# Generate index.theme
 	TMPFILE="$(tempfile)"
-	cp -a /usr/share/icons/Faenza/index.theme $TMPFILE
+	cp -a /usr/share/icons/Faience-Azur/index.theme $TMPFILE
 	sed -i -e "s%^Name=.*$%Name=aurex%;s%^Comment=.*$%Comment=Aurex Faience-Azur Icon theme%" $TMPFILE
 	mv -f $TMPFILE /usr/share/icons/aurex/index.theme
 	# Add/replace custom files
