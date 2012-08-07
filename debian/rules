@@ -35,7 +35,7 @@ build-stamp: configure-stamp
 	# generate backgrounds in png format
 	cat debian/wallpapers-top.xml > wallpapers/aurex-wallpapers.xml
 	cat debian/aurex-wallpaper-theme.links.in > debian/aurex-wallpaper-theme.links
-	for F in wallpapers/*.xcf ; do f=$${F%.xcf}; xcf2png $$F >$$f.png; basef=$${f##*/}; X=debian/$$basef.xml.in; [ -r "$$X" ] || X=debian/wallpaper.xml.in; sed -e "s%_@_basename_@_%$$basef%g;s%_@_filename_@_%$$basef.png%g" $$X >> wallpapers/aurex-wallpapers.xml; echo "/usr/share/backgrounds/$$basef /usr/share/xfce4/backdrops/$$basef" >> debian/aurex-wallpaper-theme.links; done
+	for F in wallpapers/*.xcf ; do f=$${F%.xcf}; xcf2png $$F >$$f.png; basef=$${f##*/}; X=debian/$$basef.xml.in; [ -r "$$X" ] || X=debian/wallpaper.xml.in; sed -e "s%_@_basename_@_%$$basef%g;s%_@_filename_@_%$$basef.png%g" $$X >> wallpapers/aurex-wallpapers.xml; echo "/usr/share/backgrounds/$$basef.png /usr/share/xfce4/backdrops/$$basef.png" >> debian/aurex-wallpaper-theme.links; done
 	cat debian/wallpapers-bottom.xml >> wallpapers/aurex-wallpapers.xml
 
 	# aurex-ubiquity-theme:
