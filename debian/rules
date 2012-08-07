@@ -34,7 +34,8 @@ build-stamp: configure-stamp
 
 	# generate backgrounds in png format
 	cat debian/wallpapers-top.xml > wallpapers/aurex-wallpapers.xml
-	for F in wallpapers/*.xcf ; do f=$${F%.xcf}; xcf2png $$F >$$f.png; basef=$${f##*/}; X=debian/$$basef.xml.in; [ -r "$$X" ] || X=debian/wallpaper.xml.in; sed -e "s%_@_basename_@_%$$basef%g;s%_@_filename_@_%$$basef.png%g" $$X >> wallpapers/aurex-wallpapers.xml; done
+	cat debian/aurex-wallpaper-theme.links.in > debian/aurex-wallpaper-theme.links
+	for F in wallpapers/*.xcf ; do f=$${F%.xcf}; xcf2png $$F >$$f.png; basef=$${f##*/}; X=debian/$$basef.xml.in; [ -r "$$X" ] || X=debian/wallpaper.xml.in; sed -e "s%_@_basename_@_%$$basef%g;s%_@_filename_@_%$$basef.png%g" $$X >> wallpapers/aurex-wallpapers.xml; echo "/usr/share/backgrounds/$$basef /usr/share/xfce4/backdrops/$$basef" >> debian/aurex-wallpaper-theme.links; done
 	cat debian/wallpapers-bottom.xml >> wallpapers/aurex-wallpapers.xml
 
 	# aurex-ubiquity-theme:
@@ -62,6 +63,7 @@ clean:
 	# Add here commands to clean up after the build process.
 	rm -f wallpapers/*.png
 	rm -f wallpapers/aurex-wallpapers.xml
+	rm -f debian/aurex-wallpaper-theme.links
 	rm -f grub/*.png
 	rm -f install.aurex-icon-theme/icons
 	space-sunrise/aurex/build-script clean
