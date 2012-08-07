@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Classic-Radiance-Blue-Xfce-LXDE
-Comment=The Ubuntu Radiance theme, Blue version.
+Name=aurex
+Comment=The aurex theme, a variation of Classic-Radiance-Blue-Xfce-LXDE.
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Classic-Radiance-Blue-Xfce-LXDE
-MetacityTheme=Classic-Radiance-Blue-Xfce-LXDE
-IconTheme=ubuntu-mono-light
+GtkTheme=aurex
+MetacityTheme=aurex
+IconTheme=aurex
 CursorTheme=DMZ-White
 ButtonLayout=close,minimize,maximize:
