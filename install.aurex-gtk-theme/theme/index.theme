@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Classic-Radiance-Blue-Xfce-LXDE
+Comment=The Ubuntu Radiance theme, Blue version.
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Classic-Radiance-Blue-Xfce-LXDE
+MetacityTheme=Classic-Radiance-Blue-Xfce-LXDE
+IconTheme=ubuntu-mono-light
+CursorTheme=DMZ-White
+ButtonLayout=close,minimize,maximize:
