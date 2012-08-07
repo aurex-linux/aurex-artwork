@@ -8,44 +8,44 @@ Standards-Version: 3.8.4
 Package: aurex-gnome-theme
 Architecture: all
 Depends: ${misc:Depends}, metacity-aquadreams-theme, gtk-aurex-bamboo-zen-theme, aurex-icon-theme, aurex-wallpaper-theme, gnome-screensaver, aurex-gdm-theme
-Description: Aurex 10.04 theme
+Description: Aurex 12.04 theme
  AureX full theme for GNOME
 
 Package: aurex-icon-theme
 Architecture: all
-Depends: ${misc:Depends}, aurex-transmute, faenza-icon-theme
-Description: Aurex 10.04 icon theme
- AureX icon theme based on Faenza
+Depends: ${misc:Depends}, aurex-transmute, faience-icon-theme
+Description: Aurex 12.04 icon theme
+ AureX icon theme based on Faience-Azur
 
 Package: aurex-wallpaper-theme
 Architecture: all
 Depends: ${misc:Depends}
-Description: Aurex 10.04 wallpaper theme
+Description: Aurex 12.04 wallpaper theme
  AureX wallpaper theme
 
 Package: aurex-gdm-theme
 Architecture: all
 Section: x11
 Depends: ${misc:Depends}, aurex-transmute, gdm, aurex-wallpaper-theme
-Description: Aurex 10.04 gdm configuration
- AureX 10.04 default gdm settings
+Description: Aurex 12.04 gdm configuration
+ AureX 12.04 default gdm settings
 
 Package: aurex-boot-theme
 Architecture: all
 Depends: ${misc:Depends}, aurex-transmute, grub-pc
-Description: Aurex 10.04 GRUB theme
+Description: Aurex 12.04 GRUB theme
  AureX splashimage to be used with GRUB
 
 Package: aurex-plymouth-theme
 Architecture: all
 Depends: ${misc:Depends}, aurex-transmute, plymouth, plymouth-label, plymouth-theme-script, plymouth-theme-text
-Description: Aurex 10.04 plymouth theme
+Description: Aurex 12.04 plymouth theme
  This package installs aurex-sunrise plymouth theme, based on space sunrise
 
 Package: aurex-translive-theme
 Architecture: all
 Depends: ${misc:Depends}
-Description: Aurex 10.04 translive artwork
+Description: Aurex 12.04 translive artwork
  This package installs aurex-translive splash images
 
 Package: aurex-ubiquity-theme

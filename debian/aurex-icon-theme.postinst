@@ -3,11 +3,11 @@
 case "$1" in
     configure)
 	# link Faenza icon theme
-	cp -aus /usr/share/icons/Faenza/* /usr/share/icons/aurex
+	cp -aus /usr/share/icons/Faience-Azur/* /usr/share/icons/aurex
 	# Generate index.theme
 	TMPFILE="$(tempfile)"
 	cp -a /usr/share/icons/Faenza/index.theme $TMPFILE
-	sed -i -e "s%^Name=.*$%Name=aurex%;s%^Comment=.*$%Comment=Aurex Faenza Icon theme%" $TMPFILE
+	sed -i -e "s%^Name=.*$%Name=aurex%;s%^Comment=.*$%Comment=Aurex Faience-Azur Icon theme%" $TMPFILE
 	mv -f $TMPFILE /usr/share/icons/aurex/index.theme
 	# Add/replace custom files
 	aurex-transmute --module=icon-theme transmute || true
@@ -17,6 +17,8 @@ case "$1" in
 		for t in png svg ; do
 			if [ -r $PLACES_DIR/$d/distributor-logo-aurex.$t ] ; then
 				ln -fs $PLACES_DIR/$d/distributor-logo-aurex.$t $PLACES_DIR/$d/distributor-logo.$t
+				ln -fs $PLACES_DIR/$d/distributor-logo-aurex.$t $PLACES_DIR/$d/xubuntu-logo.$t
+				ln -fs $PLACES_DIR/$d/distributor-logo-aurex.$t $PLACES_DIR/$d/xubuntu-logo-menu.$t
 				[ -r $PLACES_DIR/$d/start-here-aurex.$t ] || ln -fs $PLACES_DIR/$d/distributor-logo-aurex.$t $PLACES_DIR/$d/start-here-aurex.$t
 				ln -fs $PLACES_DIR/$d/start-here-aurex.$t $PLACES_DIR/$d/start-here.$t
 			fi
