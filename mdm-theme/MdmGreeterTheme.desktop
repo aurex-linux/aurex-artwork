@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=MdmGreeterTheme.desktop
+Name[en]=GdmGreeterTheme.desktop
+
+[MdmGreeterTheme]
+Greeter=PeaceGDM.xml
+Name=Aurex-Peace-GDM
+Description=a calming gdm skin for the Peace theme
+Author=Chuck Huber
+Copyright=(c) 2006
+Screenshot=peace-gdm-screen.jpg

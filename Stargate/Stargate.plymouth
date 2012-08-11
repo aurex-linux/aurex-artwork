@@ -1,0 +1,9 @@
+[Plymouth Theme]
+Name=Stargate
+Description=Simple Stargate Ubuntu
+ModuleName=script
+
+[script]
+ImageDir=/lib/plymouth/themes/Stargate
+ScriptFile=/lib/plymouth/themes/Stargate/Stargate.script
+
