@@ -8,18 +8,18 @@ case "$1" in
 		;;
 	*)
 		mkdir $WORK_DIR/install
-		for F in $WORK_DIR/*.png $WORK_DIR/README $WORK_DIR/*.plymouth $WORK_DIR/*.script ; do
+		for F in $WORK_DIR/../*png ; do
 			f="$(basename "$F")"
 			fxcf="$(basename "$F" ".png").xcf"
-			if [ -r "$WORK_DIR/aurex/$f" ] ; then
-				FF="$WORK_DIR/aurex/$f"
-			elif [ -r "$WORK_DIR/aurex/$fxcf" ] ; then
+			if [ -r "$WORK_DIR/$f" ] ; then
+				FF="$WORK_DIR/$f"
+			elif [ -r "$WORK_DIR/$fxcf" ] ; then
 				xcf2png "$WORK_DIR/aurex/$fxcf" > $WORK_DIR/install/$f.png
 			elif [ -r "$F" ] ; then
 				FF="$F"
 			fi
 		done
-		cp $WORK_DIR/aurex/*.script $WORK_DIR/aurex/*plymouth $WORK_DIR/README* $WORK_DIR/aurex/README* $WORK_DIR/install/
+		cp $WORK_DIR/*.script $WORK_DIR/*plymouth $WORK_DIR/../README* $WORK_DIR/README* $WORK_DIR/install/
 		;;
 esac
 
