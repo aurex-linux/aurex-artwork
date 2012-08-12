@@ -1,0 +1,205 @@
+win_width = Window.GetWidth();
+win_height = Window.GetHeight();
+ww_half = win_width / 2;
+wh_half = win_height / 2;
+
+offset = 0; //win_height / -4;
+
+sourceImage = Image ("BG.png");
+size_ratio = sourceImage.GetWidth() / win_width;
+new_height = sourceImage.GetHeight();
+nh_half = new_height / 2;
+scaledImage = sourceImage.Scale (win_width, new_height);
+spaceGlow.sprite = Sprite (scaledImage);
+spaceGlow.sprite.SetY (wh_half - nh_half + offset);
+spaceGlow.sprite.SetOpacity (1);
+
+Pudd.image = Image ("Puddle.png");
+Pudd.width = Pudd.image.GetWidth() / size_ratio;
+Pudd.height = Pudd.image.GetHeight() / size_ratio;
+Pudd.image = Pudd.image.Scale (Pudd.width, Pudd.height);
+Pudd.x = ww_half - (Pudd.width / 2);
+Pudd.y = (wh_half / 2) - (Pudd.height / 4);
+Pudd.sprite = Sprite (Pudd.image);
+Pudd.sprite.SetX (Pudd.x);
+Pudd.sprite.SetY (Pudd.y);
+Pudd.sprite.SetOpacity (0);
+
+GateSymb.image = Image ("Gate_Spinner.png");
+GateSymb.width = GateSymb.image.GetWidth() / size_ratio;
+GateSymb.height = GateSymb.image.GetHeight() / size_ratio;
+GateSymb.image = GateSymb.image.Scale (GateSymb.width, GateSymb.height);
+GateSymb.x = ww_half - (GateSymb.width / 2);
+GateSymb.y = (wh_half / 2) - (GateSymb.height / 4);
+GateSymb.sprite = Sprite (GateSymb.image);
+GateSymb.sprite.SetX (GateSymb.x);
+GateSymb.sprite.SetY (GateSymb.y);
+GateSymb.sprite.SetOpacity (1);
+
+Ring.image = Image ("Gate_Ring.png");
+Ring.width = Ring.image.GetWidth() / size_ratio;
+Ring.height = Ring.image.GetHeight() / size_ratio;
+Ring.image = Ring.image.Scale (Ring.width, Ring.height);
+Ring.x = ww_half - (Ring.width / 2);
+Ring.y = (wh_half / 2) - (Ring.height / 4);
+Ring.sprite = Sprite (Ring.image);
+Ring.sprite.SetX (Ring.x);
+Ring.sprite.SetY (Ring.y);
+Ring.sprite.SetOpacity (1);
+
+NL_L.image = Image ("Gate_NoLock_Left.png");
+NL_L.width = NL_L.image.GetWidth() / size_ratio;
+NL_L.height = NL_L.image.GetHeight() / size_ratio;
+NL_L.image = NL_L.image.Scale (NL_L.width, NL_L.height);
+NL_L.x = ww_half - (NL_L.width / 2);
+NL_L.y = (wh_half / 2) - (NL_L.height / 4);
+NL_L.sprite = Sprite (NL_L.image);
+NL_L.sprite.SetX (NL_L.x);
+NL_L.sprite.SetY (NL_L.y);
+NL_L.sprite.SetOpacity (1);
+
+NL_R.image = Image ("Gate_NoLock_Right.png");
+NL_R.width = NL_R.image.GetWidth() / size_ratio;
+NL_R.height = NL_R.image.GetHeight() / size_ratio;
+NL_R.image = NL_R.image.Scale (NL_R.width, NL_R.height);
+NL_R.x = ww_half - (NL_R.width / 2);
+NL_R.y = (wh_half / 2) - (NL_R.height / 4);
+NL_R.sprite = Sprite (NL_R.image);
+NL_R.sprite.SetX (NL_R.x);
+NL_R.sprite.SetY (NL_R.y);
+NL_R.sprite.SetOpacity (1);
+
+NL_T.image = Image ("Gate_NoLock_Top.png");
+NL_T.width = NL_T.image.GetWidth() / size_ratio;
+NL_T.height = NL_T.image.GetHeight() / size_ratio;
+NL_T.image = NL_T.image.Scale (NL_T.width, NL_T.height);
+NL_T.x = ww_half - (NL_T.width / 2);
+NL_T.y = (wh_half / 2) - (NL_T.height / 4);
+NL_T.sprite = Sprite (NL_T.image);
+NL_T.sprite.SetX (NL_T.x);
+NL_T.sprite.SetY (NL_T.y);
+NL_T.sprite.SetOpacity (1);
+
+L_L.image = Image ("Gate_Lock_Left.png");
+L_L.width = L_L.image.GetWidth() / size_ratio;
+L_L.height = L_L.image.GetHeight() / size_ratio;
+L_L.image = L_L.image.Scale (L_L.width, L_L.height);
+L_L.x = ww_half - (L_L.width / 2);
+L_L.y = (wh_half / 2) - (L_L.height / 4);
+L_L.sprite = Sprite (L_L.image);
+L_L.sprite.SetX (L_L.x);
+L_L.sprite.SetY (L_L.y);
+L_L.sprite.SetOpacity (0);
+
+L_R.image = Image ("Gate_Lock_Right.png");
+L_R.width = L_R.image.GetWidth() / size_ratio;
+L_R.height = L_R.image.GetHeight() / size_ratio;
+L_R.image = L_R.image.Scale (L_R.width, L_R.height);
+L_R.x = ww_half - (L_R.width / 2);
+L_R.y = (wh_half / 2) - (L_R.height / 4);
+L_R.sprite = Sprite (L_R.image);
+L_R.sprite.SetX (L_R.x);
+L_R.sprite.SetY (L_R.y);
+L_R.sprite.SetOpacity (0);
+
+L_T.image = Image ("Gate_Lock_Top.png");
+L_T.width = L_T.image.GetWidth() / size_ratio;
+L_T.height = L_T.image.GetHeight() / size_ratio;
+L_T.image = L_T.image.Scale (L_T.width, L_T.height);
+L_T.x = ww_half - (L_T.width / 2);
+L_T.y = (wh_half / 2) - (L_T.height / 4);
+L_T.sprite = Sprite (L_T.image);
+L_T.sprite.SetX (L_T.x);
+L_T.sprite.SetY (L_T.y);
+L_T.sprite.SetOpacity (0);
+
+distroName.image = Image ("dist_name.png");
+distroName.width = distroName.image.GetWidth() / size_ratio;
+distroName.height = distroName.image.GetHeight() / size_ratio;
+distroName.image = distroName.image.Scale (distroName.width, distroName.height);
+distroName.x = ww_half - (distroName.width / 2);
+distroName.y = win_height - (distroName.height * 1.15);
+distroName.sprite = Sprite (distroName.image);
+distroName.sprite.SetX (distroName.x);
+distroName.sprite.SetY (distroName.y);
+distroName.sprite.SetOpacity (0);
+
+NL_L.start = 0.6;
+NL_L.end = 0.7;
+
+NL_R.start = 0.7;
+NL_R.end = 0.8;
+
+NL_T.start = 0.8;
+NL_T.end = 0.9;
+
+L_L.start = 0.6;
+L_L.end = 0.7;
+
+L_R.start = 0.7;
+L_R.end = 0.8;
+
+L_T.start = 0.8;
+L_T.end = 0.9;
+
+GateSymb.start = 0.4;
+GateSymb.end = 0.9;
+
+distroName.start = 1.5;
+distroName.end = 1.9;
+
+Pudd.start = 0.8;
+Pudd.end = 1.3;
+
+fun remap (val, imin, imax, omin, omax) {
+    return (((val - imin) / (imax - imin)) * (omax - omin)) + omin;
+}
+
+fun progress_callback (d, p) {
+
+    p = (p * 100.0) / 15.0;
+
+    if (p >= NL_L.start && p <= NL_L.end) {
+        a = remap (p, NL_L.start, NL_L.end, 1, 0);
+        NL_L.sprite.SetOpacity (a);
+    }
+    if (p >= NL_R.start && p <= NL_R.end) {
+        a = remap (p, NL_R.start, NL_R.end, 1, 0);
+        NL_R.sprite.SetOpacity (a);
+    }
+    if (p >= NL_T.start && p <= NL_T.end) {
+        a = remap (p, NL_T.start, NL_T.end, 1, 0);
+        NL_T.sprite.SetOpacity (a);
+    }
+    if (p >= L_L.start && p <= L_L.end) {
+        a = remap (p, L_L.start, L_L.end, 0, 1);
+        L_L.sprite.SetOpacity (a);
+    }
+    if (p >= L_R.start && p <= L_R.end) {
+        a = remap (p, L_R.start, L_R.end, 0, 1);
+        L_R.sprite.SetOpacity (a);
+    }
+    if (p >= L_T.start && p <= L_T.end) {
+        a = remap (p, L_T.start, L_T.end, 0, 1);
+        L_T.sprite.SetOpacity (a);
+    }
+    if (p >= GateSymb.start && p <= GateSymb.end) {
+        a = remap (p, GateSymb.start, GateSymb.end, 0.5, 1);
+        b = Math.Pi * a;
+        GateSymb.sprite.SetImage (GateSymb.image.Rotate(b));
+    }
+    if (p >= distroName.start && p <= distroName.end) {
+        a = remap (p, distroName.start, distroName.end, 0, 1);
+        distroName.sprite.SetOpacity (a);
+    }
+    if (p >= Pudd.start && p <= Pudd.end) {
+        a = remap (p, Pudd.start, Pudd.end, 0, 1);
+        Pudd.sprite.SetOpacity (a);
+    }
+    if (p >= Pudd.start && p <= Pudd.end) {
+        a = remap (p, Pudd.start, Pudd.end, 0.8, 1);
+        b = Math.Pi * a;
+        Pudd.sprite.SetImage (Pudd.image.Rotate(b));
+    }
+}
+Plymouth.SetBootProgressFunction(progress_callback);
