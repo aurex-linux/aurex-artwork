@@ -68,8 +68,9 @@ clean:
 	rm -f wallpapers/aurex-wallpapers.xml
 	rm -f debian/aurex-wallpaper-theme.links
 	rm -f grub/*.png
-	rm -f install.aurex-icon-theme/icons
+	rm -rf install.aurex-icon-theme/icons
 	space-sunrise/aurex/build-script clean
+	Stargate/aurex/build-script clean
 	rm -rf install.translive
 	rm -rf install.aurex-ubiquity-theme
 	dh_clean
