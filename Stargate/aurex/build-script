@@ -14,7 +14,7 @@ case "$1" in
 			if [ -r "$WORK_DIR/$f" ] ; then
 				FF="$WORK_DIR/$f"
 			elif [ -r "$WORK_DIR/$fxcf" ] ; then
-				xcf2png "$WORK_DIR/$fxcf" > $WORK_DIR/install/$f.png
+				xcf2png "$WORK_DIR/$fxcf" > $WORK_DIR/install/$f
 			elif [ -r "$F" ] ; then
 				FF="$F"
 			fi
