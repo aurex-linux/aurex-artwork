@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Vizta
+Description=Vizta plugin.
+ModuleName=script
+
+[script]
+ImageDir=/lib/plymouth/themes/floatinglogo
+ScriptFile=/lib/plymouth/themes/floatinglogo/vizta.script

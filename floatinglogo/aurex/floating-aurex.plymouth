@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Floating urex
+Description=Floating aurex plymouth theme based on Floating Logo (Vizta plugin)
+ModuleName=script
+
+[script]
+ImageDir=/lib/plymouth/themes/floating-aurex
+ScriptFile=/lib/plymouth/themes/floating-aurex/vizta.script

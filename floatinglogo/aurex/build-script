@@ -1,0 +1,31 @@
+#!/bin/sh
+set -e
+WORK_DIR="$(dirname "$0")"
+
+case "$1" in
+	clean)
+		rm -rf $WORK_DIR/install
+		;;
+	*)
+		mkdir $WORK_DIR/install
+		for F in $WORK_DIR/../*png ; do
+			cp "$F" $WORK_DIR/install
+		done
+		# overrides
+		XCF_FILE="aurex-logos/floating-aurex.xcf"
+		PNG_FILES="progress_bar.png"
+		i=0
+		while [ $i -le 4 ] ; do
+			PNG_FILES="$PNG_FILES spec${i}.png"
+			i=$(($i + 1))
+		done
+		for c in $PNG_FILES ; do
+			xcf2png "$XCF_FILE" "$c" > $WORK_DIR/install/$c
+		done
+		xcf2png "$XCF_FILE" > $WORK_DIR/install/logo.png
+		cp $WORK_DIR/*.script $WORK_DIR/*.plymouth $WORK_DIR/install/
+		;;
+esac
+
+exit 0
+
