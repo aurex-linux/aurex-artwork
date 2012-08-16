@@ -7,7 +7,7 @@ case "$1" in
 		rm -rf $WORK_DIR/install
 		;;
 	*)
-		mkdir $WORK_DIR/install
+		mkdir -p $WORK_DIR/install
 		for F in $WORK_DIR/../*png ; do
 			cp "$F" $WORK_DIR/install
 		done
