@@ -7,10 +7,16 @@ Standards-Version: 3.8.4
 
 Package: aurex-gtk-theme
 Architecture: all
-Depends: ${misc:Depends}, clearlooks-phenix-theme, radiance-colors-xfce-lxde, aurex-icon-theme, aurex-wallpaper-theme
+Depends: ${misc:Depends}, clearlooks-phenix-theme, radiance-colors-xfce-lxde, aurex-icon-theme, aurex-wallpaper-theme, aurex-default-settings
 #, gnome-screensaver, aurex-gdm-theme
 Description: Aurex 12.04 theme
  AureX full theme for GNOME/XFCE
+
+Package: aurex-default-settings
+Architecture: all
+Depends: ${misc:Depends}, dconf-gsettings-backend | gsettings-backend, gconf2, ttf-droid, x11-common, aurex-mdm-theme
+Description: default settings for the aurex 12.04 desktop
+ This package contains the default settings used by aurex 12.04.
 
 Package: aurex-gnome-theme
 Architecture: all
@@ -30,6 +36,13 @@ Depends: ${misc:Depends}
 Description: Aurex 12.04 wallpaper theme
  AureX wallpaper theme
 
+Package: aurex-mdm-theme
+Architecture: all
+Section: x11
+Depends: ${misc:Depends}, aurex-transmute, mdm, aurex-wallpaper-theme
+Description: Aurex 12.04 mdm configuration
+ AureX 12.04 default mdm settings
+
 Package: aurex-gdm-theme
 Architecture: all
 Section: x11
@@ -47,7 +60,8 @@ Package: aurex-plymouth-theme
 Architecture: all
 Depends: ${misc:Depends}, aurex-transmute, plymouth, plymouth-label, plymouth-theme-script, plymouth-theme-text
 Description: Aurex 12.04 plymouth theme
- This package installs aurex-sunrise plymouth theme, based on space sunrise
+ This package installs floating-aurex plymouth theme, based on floating-logo.
+ The old aurex-sunrise plymouth theme is also installed.
 
 Package: aurex-translive-theme
 Architecture: all

@@ -1,8 +1,9 @@
 aurex-artwork (12.04.2) precise; urgency=low
 
   * boot and plymouth themes updated for 12.04
+  * new binary packages: aurex-default-settings and aurex-mdm-theme
 
- -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Wed, 15 Aug 2012 23:25:20 +0200
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Thu, 16 Aug 2012 00:58:16 +0200
 
 aurex-artwork (12.04.1) precise; urgency=low
 

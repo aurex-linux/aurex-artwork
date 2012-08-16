@@ -1,0 +1,26 @@
+#!/bin/sh
+set -e
+WORK_DIR="$(dirname "$0")"
+
+case "$1" in
+	clean)
+		rm -rf $WORK_DIR/install
+		;;
+	*)
+		mkdir $WORK_DIR/install
+		for F in $WORK_DIR/../*png ; do
+			cp "$F" $WORK_DIR/install
+		done
+		# overrides
+		XCF_FILE="aurex-logos/aurex-mdm-theme.xcf"
+		PNG_FILES="background.png"
+		for c in $PNG_FILES ; do
+			xcf2png "$XCF_FILE" "$c" > $WORK_DIR/install/$c
+		done
+		xcf2png "$XCF_FILE" > $WORK_DIR/install/mainbox.png
+		cp $WORK_DIR/*.desktop $WORK_DIR/*.xml $WORK_DIR/install/
+		;;
+esac
+
+exit 0
+
