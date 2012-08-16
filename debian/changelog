@@ -1,7 +1,13 @@
+aurex-artwork (12.04.3) precise; urgency=low
+
+  * new binary package: aurex-default-settings
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Fri, 17 Aug 2012 01:04:48 +0200
+
 aurex-artwork (12.04.2) precise; urgency=low
 
   * boot and plymouth themes updated for 12.04
-  * new binary packages: aurex-default-settings and aurex-mdm-theme
+  * new binary package: aurex-mdm-theme
 
  -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Thu, 16 Aug 2012 00:58:16 +0200
 

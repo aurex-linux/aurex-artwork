@@ -7,14 +7,14 @@ Standards-Version: 3.8.4
 
 Package: aurex-gtk-theme
 Architecture: all
-Depends: ${misc:Depends}, clearlooks-phenix-theme, radiance-colors-xfce-lxde, aurex-icon-theme, aurex-wallpaper-theme, aurex-default-settings
+Depends: ${misc:Depends}, clearlooks-phenix-theme, radiance-colors-xfce-lxde, aurex-icon-theme, aurex-wallpaper-theme, aurex-icon-theme
 #, gnome-screensaver, aurex-gdm-theme
 Description: Aurex 12.04 theme
  AureX full theme for GNOME/XFCE
 
 Package: aurex-default-settings
 Architecture: all
-Depends: ${misc:Depends}, dconf-gsettings-backend | gsettings-backend, gconf2, ttf-droid, x11-common, aurex-mdm-theme
+Depends: ${misc:Depends}, dconf-gsettings-backend | gsettings-backend, gconf2, ttf-droid, x11-common, aurex-mdm-theme, aurex-gtk-theme, nautilus, gnome-terminal, firefox
 Description: default settings for the aurex 12.04 desktop
  This package contains the default settings used by aurex 12.04.
 
