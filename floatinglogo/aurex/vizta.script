@@ -1,5 +1,5 @@
 for (i=0; i<10; i++){
-  spec[i].image = Image("spec" + (i % 3) + ".png");
+  spec[i].image = Image("spec" + (i % 5) + ".png");
   spec[i].sprite = Sprite(spec[i].image);
   spec[i].sprite.SetOpacity (0.0);
   }
