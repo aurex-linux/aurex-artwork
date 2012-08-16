@@ -57,8 +57,7 @@ build-stamp: configure-stamp
 	# build floating-aurex plymouth required files
 	floatinglogo/aurex/build-script build
 	# build mdm required files
-	floatinglogo/aurex/build-script build
-	BlueMint/aurex/build-script
+	BlueMint/aurex/build-script build
 	mkdir -p install.translive
 	for F in aurex-logos/translive/*.svg ; do ff=$${F%.svg}; f=$${ff##*/}; inkscape --without-gui --file=$$F --export-png=install.translive/$$f.png ; done
 
