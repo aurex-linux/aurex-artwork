@@ -25,12 +25,12 @@
 		<!-- login window pixmap -->
 		<item type="pixmap">
 			<normal file="main_box.png"/>
-			<pos x="20" y="130"/>
+			<pos x="6" y="100"/>
 		</item>
 		
 		<!-- user_list -->
 		<item type="list" id="userlist" alpha="0.3">
-			<pos x="24" y="138" height="200" width="250"/>
+			<pos x="24" y="138" height="170" width="250"/>
 			<color iconcolor="#ffffff" labelcolor="#ffffff"/>
 		</item>
 		<!-- textbox -->
@@ -98,7 +98,7 @@
 
 		<!-- Options Label-->
 		<item type="label">
-			<pos anchor="w" x="7.5%" y="83.9%"/>
+			<pos anchor="w" x="0%" y="410"/>
 			<normal color="#ffffff" font="Arial 12" alpha="0.65"/>
 			<!--  %h is the hostname, or write Ubuntu, Suse, etc -->
 			<text>%h</text>
@@ -106,7 +106,7 @@
 
 		<!-- language option -->
 		<item type="rect" id="language_button" button="true">
-			<pos anchor="w" x="7.5%" y="429" width="53" height="50"/>		
+			<pos anchor="w" x="0%" y="451" width="53" height="50"/>		
 			<box orientation="vertical" spacing="5">
 				<!-- button text-label -->
 				<item type="label">
@@ -119,7 +119,7 @@
 
 		<!-- session option -->
 		<item type="rect" id="session_button" button="true">
-			<pos anchor="w" x="7.5%" y="450" width="53" height="50"/>			
+			<pos anchor="w" x="0%" y="472" width="53" height="50"/>			
 			<box orientation="vertical" spacing="5">
 				<!-- button text-label -->
 				<item type="label">
@@ -132,7 +132,7 @@
 
 		<!-- Chooser option -->
 		<item type="rect" id="chooser_button" button="true">
-			<pos anchor="w" x="7.5%" y="472" width="500" height="50"/>			
+			<pos anchor="w" x="0%" y="493" width="500" height="50"/>			
 			<box orientation="vertical" spacing="5">
 				<!-- button text-label -->
 				<item type="label">
