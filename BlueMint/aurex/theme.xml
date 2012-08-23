@@ -22,6 +22,49 @@
 		<pos x="0" y="0" width="100%" height="100%"/>
 	</item>
 
+		<!-- login window pixmap -->
+		<item type="pixmap">
+			<normal file="main_box.png"/>
+			<pos x="20" y="130"/>
+		</item>
+		
+		<!-- user_list -->
+		<item type="list" id="userlist" alpha="0.3">
+			<pos x="24" y="138" height="200" width="250"/>
+			<color iconcolor="#ffffff" labelcolor="#ffffff"/>
+		</item>
+		<!-- textbox -->
+		<item type="pixmap">
+			<normal file="text.png"/>
+			<pos x="20" y="338"/>
+		</item>
+			
+		
+
+		<!-- username/password label -->
+		<item type="label" id="pam-prompt">
+			<pos x="24" y="320" />
+			<stock type="username-label"/>
+			<normal color="#525252" font="Arial 9 Bold"/>
+		</item>
+
+
+
+
+		 <!-- username/password entry -->
+		<item type="entry" id="user-pw-entry">
+			<pos x="26" y="343" />
+			<normal color="#525252" font="Arial 9 Bold"/>
+			<pos width="150" height="20"/>
+		</item>
+		<!-- CAPS-LOCK warning -->
+		<item type="label" id="caps-lock-warning">
+			<pos x="27" y="390"/>
+			<normal font="Arial bold 8" color="#e84949" alpha="0.9"/>
+			<stock type="caps-lock-warning"/>
+		</item>
+			
+
 	<!-- login window container -->
 	<item type="rect">
 		
@@ -29,17 +72,6 @@
 		<fixed>
 
 
-		<!-- login window pixmap -->
-		<item type="pixmap">
-			<normal file="main_box.png"/>
-			<pos anchor="center" x="50%" y="50%"/>
-		</item>
-		
-		<!-- user_list -->
-		<item type="list" id="userlist" alpha="0.3">
-			<pos x="200" y="117" height="200" width="250"/>
-			<color iconcolor="#ffffff" labelcolor="#ffffff"/>
-		</item>
 
 		<!-- Distro logo -->
 		<item type="pixmap">
@@ -55,40 +87,8 @@
 			<text> </text>
 			</item>
 						
-		<!-- textbox -->
-		<item type="pixmap">
-			<normal file="text.png"/>
-			<pos anchor="n" x="50%" y="288"/>
-		</item>
-			
-		
-
-		<!-- username/password label -->
-		<item type="label" id="pam-prompt">
-			<pos anchor="e" x="33%" y="71.5%" />
-			<stock type="username-label"/>
-			<normal color="#525252" font="Arial 9 Bold"/>
-		</item>
 
 
-
-
-		 <!-- username/password entry -->
-		<item type="entry" id="user-pw-entry">
-			<pos anchor="w" x="37.3%" y="72%" />
-			<normal color="#525252" font="Arial 9 Bold"/>
-			<pos width="150" height="20"/>
-		</item>
-
-
-
-		<!-- CAPS-LOCK warning -->
-		<item type="label" id="caps-lock-warning">
-			<pos anchor="n" x="50%" y="293"/>
-			<normal font="Arial bold 8" color="#e84949" alpha="0.9"/>
-			<stock type="caps-lock-warning"/>
-		</item>
-			
 		<!-- error messages -->
 		<item type="label" id="pam-error">
 			<pos anchor="n" x="50%" y="500"/>

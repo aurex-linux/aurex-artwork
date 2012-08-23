@@ -12,10 +12,11 @@ case "$1" in
 			cp "$F" $WORK_DIR/install
 		done
 		# overrides
-		MBOX_FILE="aurex-logos/aurex-mdm-theme.xcf"
-		BG_FILE="wallpapers/aurex-golden-ratio.xcf"
-		xcf2png "$BG_FILE" "fondo0" "fondo1" > $WORK_DIR/install/background.png
-		xcf2png "$MBOX_FILE" > $WORK_DIR/install/main_box.png
+		MDM_FILE="aurex-logos/aurex-mdm.xcf"
+		xcf2png "$MDM_FILE" > $WORK_DIR/install/background.png
+		for f in text.png main_box.png ; do
+			xcf2png "$MDM_FILE" "$f" > $WORK_DIR/install/$f
+		done
 		cp $WORK_DIR/*.desktop $WORK_DIR/*.xml $WORK_DIR/install/
 		;;
 esac
