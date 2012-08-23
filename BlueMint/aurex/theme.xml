@@ -25,25 +25,25 @@
 		<!-- login window pixmap -->
 		<item type="pixmap">
 			<normal file="main_box.png"/>
-			<pos x="6" y="100"/>
+			<pos x="3%" y="100"/>
 		</item>
 		
 		<!-- user_list -->
 		<item type="list" id="userlist" alpha="0.3">
-			<pos x="24" y="138" height="170" width="250"/>
+			<pos x="5%" y="138" height="170" width="250"/>
 			<color iconcolor="#ffffff" labelcolor="#ffffff"/>
 		</item>
 		<!-- textbox -->
 		<item type="pixmap">
 			<normal file="text.png"/>
-			<pos x="20" y="338"/>
+			<pos x="5%" y="338"/>
 		</item>
 			
 		
 
 		<!-- username/password label -->
 		<item type="label" id="pam-prompt">
-			<pos x="24" y="320" />
+			<pos x="6%" y="320" />
 			<stock type="username-label"/>
 			<normal color="#525252" font="Arial 9 Bold"/>
 		</item>
@@ -53,13 +53,13 @@
 
 		 <!-- username/password entry -->
 		<item type="entry" id="user-pw-entry">
-			<pos x="26" y="343" />
+			<pos x="6%" y="343" />
 			<normal color="#525252" font="Arial 9 Bold"/>
 			<pos width="150" height="20"/>
 		</item>
 		<!-- CAPS-LOCK warning -->
 		<item type="label" id="caps-lock-warning">
-			<pos x="27" y="390"/>
+			<pos x="6%" y="390"/>
 			<normal font="Arial bold 8" color="#e84949" alpha="0.9"/>
 			<stock type="caps-lock-warning"/>
 		</item>
