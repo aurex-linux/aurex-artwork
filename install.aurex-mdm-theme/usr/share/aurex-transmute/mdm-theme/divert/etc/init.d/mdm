@@ -1,0 +1,6 @@
+#!/bin/sh
+# -------
+# Description: mdm init script replacement
+# Author:      Luis Antonio Garcia Gisbert <luisgg@gmail.com> 
+
+exec /etc/init.d/lightdm "$@"
