@@ -30,9 +30,57 @@ Files: bitmaps/little-green-planet-converted.jpg
 Copyright: Copyright 2010-2011 D Sharon Pruitt <pink@pinksherbet.com>
 License: Attribution 2.0 Generic (CC BY 2.0) 
 
+Files: bitmaps/335417_minimalizm_stil_kraska_kapli_1920x1200_(www.GdeFon.ru).jpg
+Copyright: Copyright 2011 www.GdeFon.com (http://www.gdefon.com/download/minimalism-style-paint-drops/335417/1920x1200)
+License: free (unspecified)
+
+Files: bitmaps/blue-jeans-pocket.jpg
+Copyright: Copyright Petr Kratochvil (http://www.publicdomainpictures.net/browse-author.php?a=1)
+License: Public domain image, royalty free stock photo
+
+Files: bitmaps/Blue Moon.jpg
+Copyright: Copyright 2004 by imagiNature (http://www.imaginature.us)
+License: Attribution-NonCommercial-ShareAlike 2.0 Generic (CC BY-NC-SA 2.0)
+
+Files: bitmaps/Pinnacle Bay.jpg
+Copyright: Copyright 2004 by imagiNature (http://www.imaginature.us)
+License: Attribution-NonCommercial-ShareAlike 2.0 Generic (CC BY-NC-SA 2.0)
+
+Files: bitmaps/flickr-2127749330-original.jpg
+Copyright: Copyright 2009 chefranden (http://www.flickr.com/photos/48394718@N00)
+License: Attribution 2.0 Generic (CC BY 2.0)
+
+Files: bitmaps/flickr-3437937343-original.jpg
+Copyright: Copyright 2009 jagelado (http://www.flickr.com/photos/53763120@N00)
+License: Attribution-NonCommercial 2.0 Generic (CC BY-NC 2.0)
+
+Files: bitmaps/Golden_Ratio___Math_Wall_by_Amilmawen.jpg
+Copyright: Copyright 2007 ~Amilmawen (http://amilmawen.deviantart.com/)
+License: free (unspecified)
+
+Files: bitmaps/Golden_Ratio___Math_Wall_by_Amilmawen-no-logo.jpg
+Copyright: Copyright 2012 Luis Antonio Garcia Gisbert <luisgg@gmail.com>
+License: GPL-3+
+
+Files: bitmaps/Phi_by_TheBradshaw.jpg
+Copyright: Copyright 2007 ~TheBradshaw (http://thebradshaw.deviantart.com/)
+License: free to use, distribute, sell, whatever. no copyrights claimed
+
 Files: space-sunrise/*
 Copyright: Copyright 2010-2011 Andre "Osku" Schmidt (https://gitorious.org/oskude/space-sunrise)
 License: Public domain
+
+Files: bitmaps/playa-san-jose.jpg
+Copyright: Copyright 2012 Luis Antonio Garcia Gisbert <luisgg@gmail.com>
+License: GPL-3+
+
+Files: bitmaps/street-iron-work-clock_w725_h544.jpg
+Copyright: http://www.public-domain-image.com/objects-public-domain-images-pictures/clocks-public-domain-images-pictures/street-iron-work-clock.jpg.html
+License: Public domain image, royalty free stock photo
+
+Files: bitmaps/star.png
+Copyright: Copyright 2009 Kristian Høgsberg <krh@redhat.com>, Ray Strode <halfline@gmail.com>, Peter Jones <pjones@redhat.com>
+License: GPL-2+
 
 Files: space-sunrise/space-sunrise-logo.script
 Copyright: Copyright 2010-2011 tj c (User: inameiname on gnome-look.org)
@@ -41,6 +89,35 @@ License: GPL-3+
 Files: space-sunrise/aurex/*
 Copyright: Copyright 2011 Luis Antonio Garcia Gisbert <luisgg@gmail.com>
 License: GPL-3+
+
+Files: BlueMint/*
+Copyright: Copyright Emmanuel Nolasco
+License: GPL
+
+Files: BlueMint/aurex/*
+Copyright: Copyright 2012 Luis Antonio Garcia Gisbert <luisgg@gmail.com>
+License: GPL-3+
+
+Files: floatinglogo/*
+Copyright: Copyright 2012 Matei Cezar (http://gnome-look.org/usermanager/search.php?username=caezsar)
+License: GPL
+
+Files: floatinglogo/aurex/*
+Copyright: Copyright 2012 Luis Antonio Garcia Gisbert <luisgg@gmail.com>
+License: GPL-3+
+
+Files: PeaceGDM/*
+Copyright: Copyright Chuck Huber <chuck@lagunadata.com>
+License: Creative Commons Attribution-ShareAlike 2.5
+
+Files: Stargate/*
+Copyright: Copyright 2011 zeckman1138 (http://gnome-look.org/usermanager/search.php?username=zeckman1138)
+License: GPL
+
+Files: Stargate/aurex/*
+Copyright: Copyright 2012 Luis Antonio Garcia Gisbert <luisgg@gmail.com>
+License: GPL-3+
+
 
 
    This program is free software; you can redistribute it and/or modify
