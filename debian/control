@@ -40,7 +40,7 @@ Description: Aurex 12.04 wallpaper theme
 Package: aurex-mdm-theme
 Architecture: all
 Section: x11
-Depends: ${misc:Depends}, aurex-transmute, mdm, aurex-wallpaper-theme
+Depends: ${misc:Depends}, aurex-transmute, mdm, aurex-wallpaper-theme, lightdm
 Description: Aurex 12.04 mdm configuration
  AureX 12.04 default mdm settings
 
