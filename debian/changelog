@@ -1,14 +1,8 @@
 aurex-artwork (12.04.4) precise; urgency=low
 
-  * Divert init scripts of mdm and lightdm.
-    Notice that now, lightdm upstart job runs mdm daemon instead
-    of the original lightdm daemon !!!
-    This hack is really an unelegant and dirty trick to simplify
-    mdm integration with lots of related upstart jobs (plymouth, ...),
-    but IMHO, is the easiest way to run mdm in Ubuntu 12.04.
-    The upstart script, extracts which display manager must be run from the
-    the standard file /etc/X11/default-display-manager, so can be changed with
-    a simple 'dpkg-reconfigure' of lightdm or mdm (or gdm)
+  * Divert init script of mdm.
+    The new init script adds a line to stop plymouth due to
+    the lack of integration of mdm with upstart and Ubuntu 12.04
 
  -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Thu, 23 Aug 2012 11:20:08 +0200
 

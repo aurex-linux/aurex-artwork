@@ -4,8 +4,6 @@ case "$1" in
     configure)
 	# divert original lightdm/mdm settings
 	aurex-transmute --module=mdm-theme transmute || true
-	# remove mdm startup symlinks
-	update-rc.d -f mdm remove
 	;;
     abort-upgrade|abort-remove|abort-deconfigure)
     	;;
