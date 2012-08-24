@@ -41,7 +41,8 @@ case "$1" in
            [ "$CONFIGURED_DAEMON" != mdm ] ; then
                 log_action_msg "Not starting MDM Display Manager; it is not the default display manager"
         else
-		stop plymouth || true
+		#stop plymouth || true
+		[ ! -x /bin/plymouth ] || /bin/plymouth quit || true
                 log_daemon_msg "Starting MDM Display Manager" "mdm"
                 start_daemon $DAEMON
                 log_end_msg $?
@@ -52,6 +53,7 @@ case "$1" in
         set +e
         start-stop-daemon --stop --quiet --pidfile /var/run/mdm.pid \
                 --name mdm --retry 5
+	[ ! -x /sbin/initctl ] || /sbin/initctl emit desktop-shutdown || true
         set -e
         log_end_msg $?
   ;;
@@ -68,6 +70,7 @@ case "$1" in
   ;;
   restart|force-reload)
         $0 stop
+	sleep 1
         $0 start
   ;;
   *)
