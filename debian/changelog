@@ -1,4 +1,4 @@
-aurex-artwork (12.04.4ubuntu1) precise; urgency=low
+aurex-artwork (12.04.5) precise; urgency=low
 
   * Removed obsolete aurex-gnome-theme binary package
   * Set aurex theme and session as defaults in mdm
