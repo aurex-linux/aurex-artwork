@@ -1,3 +1,10 @@
+aurex-artwork (12.04.6) precise; urgency=low
+
+  * Change grub-pc dependency to grub2 to fix an unexplainable error of
+    apt in the simulated installation inside a debootstrap (amd64)
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Sun, 26 Aug 2012 21:22:25 +0200
+
 aurex-artwork (12.04.5) precise; urgency=low
 
   * Removed obsolete aurex-gnome-theme binary package
