@@ -19,12 +19,6 @@ Recommends: xfce4-utils, nautilus, gnome-terminal, firefox, vlc, gthumb, rhythmb
 Description: default settings for the aurex 12.04 desktop
  This package contains the default settings used by aurex 12.04.
 
-Package: aurex-gnome-theme
-Architecture: all
-Depends: ${misc:Depends}, metacity-aquadreams-theme, gtk-aurex-bamboo-zen-theme, aurex-icon-theme, aurex-wallpaper-theme, gnome-screensaver, aurex-gdm-theme
-Description: Aurex 12.04 theme
- AureX full theme for GNOME
-
 Package: aurex-icon-theme
 Architecture: all
 Depends: ${misc:Depends}, aurex-transmute, faience-icon-theme
@@ -40,7 +34,7 @@ Description: Aurex 12.04 wallpaper theme
 Package: aurex-mdm-theme
 Architecture: all
 Section: x11
-Depends: ${misc:Depends}, aurex-transmute, mdm, aurex-wallpaper-theme, lightdm
+Depends: ${misc:Depends}, aurex-transmute, mdm, aurex-icon-theme
 Description: Aurex 12.04 mdm configuration
  AureX 12.04 default mdm settings
 
