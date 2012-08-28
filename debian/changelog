@@ -1,3 +1,9 @@
+aurex-artwork (12.04.10) precise; urgency=low
+
+  * Fixed xscreensaver settings
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Tue, 28 Aug 2012 18:26:42 +0200
+
 aurex-artwork (12.04.9) precise; urgency=low
 
   * Some esthetic changes

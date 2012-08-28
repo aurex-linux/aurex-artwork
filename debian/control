@@ -14,7 +14,7 @@ Description: Aurex 12.04 theme
 
 Package: aurex-default-settings
 Architecture: all
-Depends: ${misc:Depends}, dconf-gsettings-backend | gsettings-backend, gconf2, ttf-droid, x11-common, aurex-mdm-theme, aurex-gtk-theme
+Depends: ${misc:Depends}, dconf-gsettings-backend | gsettings-backend, gconf2, ttf-droid, x11-common, aurex-mdm-theme, aurex-gtk-theme, aurex-wallpaper-theme (>=12.04.10), xscreensaver, xscreensaver-data, xscreensaver-data-extra, xscreensaver-gl, xscreensaver-gl-extra
 Recommends: xfce4-utils, nautilus, gnome-terminal, firefox, vlc, gthumb, rhythmbox
 Description: default settings for the aurex 12.04 desktop
  This package contains the default settings used by aurex 12.04.
