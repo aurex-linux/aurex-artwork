@@ -1,3 +1,11 @@
+aurex-artwork (12.04.11) precise; urgency=low
+
+  * Enable 'vino-preferences' in xfce-settings-manager desktop 
+  * Fix generation of links in /usr/share/aurex/backdrops
+  * Fixed panel applets for xfce-settings, web-browser and terminal
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Wed, 29 Aug 2012 02:34:29 +0200
+
 aurex-artwork (12.04.10) precise; urgency=low
 
   * Fixed xscreensaver settings

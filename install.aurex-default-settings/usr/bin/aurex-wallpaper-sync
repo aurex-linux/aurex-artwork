@@ -1,0 +1,52 @@
+#!/bin/sh
+# -------
+# File:        aurex-wallpaper-sync
+# Description: simple script to copy gsettings wallpaper to xfconf
+# Author:      Luis Antonio Garcia Gisbert <luisgg@gmail.com> 
+# 
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along 
+# with this program; if not, write to the Free Software Foundation, Inc., 
+# 51 Franklin St, Fifth Floor, Boston MA 02110-1301 USA
+# --------
+
+
+get_gnome_wallpaper(){
+	gsettings get org.gnome.desktop.background picture-uri
+}
+
+get_xfce_wallpaper(){
+	xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path
+}
+
+set_xfce_wallpaper(){
+	BG_FILE=${1#\'file://}
+	BG_FILE="${BG_FILE%\'}"
+	xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s "$BG_FILE"
+}
+
+# main
+WAIT_TIME=3
+
+LAST_GNOME="$(get_gnome_wallpaper)"
+while : ; do
+	NEW_GNOME="$(get_gnome_wallpaper)"
+	echo $LAST_GNOME
+	echo $NEW_GNOME
+	if [ "$NEW_GNOME" != "$LAST_GNOME" ] ; then
+		LAST_GNOME="$NEW_GNOME"
+		set_xfce_wallpaper "${NEW_GNOME}"
+	fi
+	sleep $WAIT_TIME
+done
+
+exit 0
