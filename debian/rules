@@ -39,9 +39,9 @@ build-stamp: configure-stamp
 	cat debian/wallpapers-bottom.xml >> wallpapers/aurex-wallpapers.xml
 
 	# aurex-ubiquity-theme:
-		# copy gdm wallwaper as replacement for ubiquity install mode background
+		# copy default wallwaper as replacement for ubiquity install mode background
 	mkdir -p $(UBIQUITY_BASEDIR)/usr/share/backgrounds
-	cp wallpapers/aurex-droplet-gdm.png $(UBIQUITY_BASEDIR)/usr/share/backgrounds/warty-final-ubuntu.png
+	cp wallpapers/aurex-color.png $(UBIQUITY_BASEDIR)/usr/share/backgrounds/warty-final-ubuntu.png
 	for d in pixmaps ubiquity/pixmaps/ubuntu ; do for F in aurex-logos/ubiquity/$$d/*.svg; do fsvg=$${F##*/}; f=$${fsvg%.svg}; mkdir -p $(UBIQUITY_BASEDIR)/usr/share/$$d ; inkscape --without-gui --file=$$F --export-png=$(UBIQUITY_BASEDIR)/usr/share/$$d/$$f.png ; done ; done
 
 	# generate grub splash

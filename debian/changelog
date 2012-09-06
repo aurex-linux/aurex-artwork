@@ -1,3 +1,9 @@
+aurex-artwork (12.04.15) precise; urgency=low
+
+  * Update ubiquity installer background
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Thu, 06 Sep 2012 10:14:02 +0200
+
 aurex-artwork (12.04.14) precise; urgency=low
 
   * Divert 'ssh session' of mdm
