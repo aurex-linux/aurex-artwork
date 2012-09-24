@@ -1,3 +1,9 @@
+aurex-artwork (12.04.16) precise; urgency=low
+
+  * BlueAurex mdm theme replaced with SimplyAurex
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Mon, 24 Sep 2012 08:02:58 +0200
+
 aurex-artwork (12.04.15) precise; urgency=low
 
   * Update ubiquity installer background
