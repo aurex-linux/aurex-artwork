@@ -64,7 +64,7 @@ build-stamp: configure-stamp
 
 	# generate custom image under faces directory to install in gtk-theme package
 	mkdir -p install.aurex-gtk-theme/faces
-	inkscape --without-gui --file=aurex-logos/icons/places/distributor-logo-aurex.svg --export-width=96 --export-height=96 --export-png=install.aurex-gtk-theme/facess/aurex.png
+	inkscape --without-gui --file=aurex-logos/icons/places/distributor-logo-aurex.svg --export-width=96 --export-height=96 --export-png=install.aurex-gtk-theme/faces/aurex.png
 
 clean:
 	dh_testdir
