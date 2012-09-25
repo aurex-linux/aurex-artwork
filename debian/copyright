@@ -122,6 +122,14 @@ Files: Stargate/aurex/*
 Copyright: Copyright 2012 Luis Antonio Garcia Gisbert <luisgg@gmail.com>
 License: GPL-3+
 
+Files: Simply_Grace/*
+Copyright: Copyright 2009 devi710 (http://gnome-look.org/usermanager/search.php?username=devi710)
+License: Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0) 
+
+Files: Simply_Grace/aurex/*
+Copyright: Copyright 2012 Luis Antonio Garcia Gisbert <luisgg@gmail.com>
+License: GPL-3+
+
 
 
    This program is free software; you can redistribute it and/or modify
