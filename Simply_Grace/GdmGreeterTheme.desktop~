@@ -1,8 +1,0 @@
-[GdmGreeterTheme]
-Encoding=UTF-8
-Greeter=grace.xml
-Name=Simply Grace
-Description=Clean GDM Theme, version with user list.
-Author=Riley Brandt. Background by alexander-gg
-Copyright=CC Attribution-Noncommercial-Share Alike
-Screenshot=screen.jpg
