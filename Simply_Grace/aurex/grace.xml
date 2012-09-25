@@ -18,7 +18,7 @@
 	<!-- or you could get rid of this and just have a base color (from above)-->
 	<item type="pixmap">
 		<!-- Point this to another file -->
-		<normal file="aurex-color.png"/>
+		<normal file="bg.png"/>
 		<pos x="0" y="0" width="100%" height="100%"/>
 	</item>
 
