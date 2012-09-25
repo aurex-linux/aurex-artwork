@@ -62,6 +62,10 @@ build-stamp: configure-stamp
 	mkdir -p install.translive
 	for F in aurex-logos/translive/*.svg ; do ff=$${F%.svg}; f=$${ff##*/}; inkscape --without-gui --file=$$F --export-png=install.translive/$$f.png ; done
 
+	# generate custom image under faces directory to install in gtk-theme package
+	mkdir -p install.aurex-gtk-theme/faces
+	inkscape --without-gui --file=aurex-logos/icons/places/distributor-logo-aurex.svg --export-width=96 --export-height=96 --export-png=install.aurex-gtk-theme/facess/aurex.png
+
 clean:
 	dh_testdir
 	dh_testroot
@@ -78,6 +82,7 @@ clean:
 	Simply_Grace/aurex/build-script clean
 	rm -rf install.translive
 	rm -rf install.aurex-ubiquity-theme
+	rm -rf install.aurex-gtk-theme/faces
 	dh_clean
 
 install: build

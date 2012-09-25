@@ -1,2 +1,3 @@
 install.aurex-gtk-theme/theme/*		/usr/share/themes/aurex
 install.aurex-gtk-theme/transmute/*	/usr/share/aurex-transmute/gtk-theme/base-files/usr/share/themes/aurex
+install.aurex-gtk-theme/faces/*		/usr/share/pixmaps/faces
