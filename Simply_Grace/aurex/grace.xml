@@ -47,7 +47,10 @@
 			<pos anchor="c" x="50%" y="110"/>
 			<normal color="#52504d" font="Verdana 14"/>
 			<!--  %h is the hostname, or write Ubuntu, Suse, etc -->
+			<!--
 			<stock type="welcome-label"/>
+			-->
+			<text>%h</text>
 			</item>
 						
 		<!--Clock-->

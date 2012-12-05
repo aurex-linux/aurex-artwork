@@ -59,6 +59,8 @@ build-stamp: configure-stamp
 	# build mdm required files
 	BlueMint/aurex/build-script build
 	Simply_Grace/aurex/build-script build
+	mkdir -p install.fatcli-mdm/divert; xcf2png aurex-logos/aurex-fatcli-mdm.xcf > install.fatcli-mdm/divert/bg.png
+
 	mkdir -p install.translive
 	for F in aurex-logos/translive/*.svg ; do ff=$${F%.svg}; f=$${ff##*/}; inkscape --without-gui --file=$$F --export-png=install.translive/$$f.png ; done
 
@@ -80,6 +82,7 @@ clean:
 	floatinglogo/aurex/build-script clean
 	BlueMint/aurex/build-script clean
 	Simply_Grace/aurex/build-script clean
+	rm -rf install.fatcli-mdm
 	rm -rf install.translive
 	rm -rf install.aurex-ubiquity-theme
 	rm -rf install.aurex-gtk-theme/faces

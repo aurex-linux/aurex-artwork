@@ -31,6 +31,13 @@ Depends: ${misc:Depends}, aurex-transmute (>=0.26), mdm (>=1.0.7-0~webupd8~preci
 Description: Aurex 12.04 mdm configuration
  AureX 12.04 default mdm settings
 
+Package: aurex-fatcli-mdm
+Architecture: all
+Section: x11
+Depends: ${misc:Depends}, aurex-transmute (>=0.26), mdm (>=1.0.7-0~webupd8~precise), aurex-mdm-theme
+Description: Aurex 12.04 Fat Clients mdm configuration
+ AureX 12.04 Fat Clients mdm settings
+
 Package: aurex-gdm-theme
 Architecture: all
 Section: x11
