@@ -1,3 +1,11 @@
+aurex-artwork (12.04.19ubuntu1) precise; urgency=low
+
+  * added id="clock" in clock label of mdm theme, to get time
+    automatically updated every minute (but this NOT solves the
+    "blank login screen" issue)
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Tue, 11 Dec 2012 19:50:11 +0100
+
 aurex-artwork (12.04.19) precise; urgency=low
 
   * Fixed transmute path in aurex-plymouth-theme (this is a really

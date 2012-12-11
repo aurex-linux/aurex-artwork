@@ -54,7 +54,7 @@
 			</item>
 						
 		<!--Clock-->
-		<item type="label">
+		<item type="label" id="clock" >
 			<pos anchor="c" x="50%" y="130"/>
 			<normal color="#52504d" font="Verdana 8"/>
 			<!--  %c is the clock -->
