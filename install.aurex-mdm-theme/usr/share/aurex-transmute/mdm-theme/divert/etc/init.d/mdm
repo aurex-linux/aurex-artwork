@@ -42,7 +42,12 @@ case "$1" in
                 log_action_msg "Not starting MDM Display Manager; it is not the default display manager"
         else
 		#stop plymouth || true
-		[ ! -x /bin/plymouth ] || /bin/plymouth quit || true
+		if [ -e /etc/init/plymouth-stop.conf ] && [ -x /sbin/initctl ] ; then
+			/sbin/initctl start plymouth-stop || true
+		elif [ -x /bin/plymouth ] ; then
+			/bin/plymouth quit || true
+		fi
+		sleep 2
                 log_daemon_msg "Starting MDM Display Manager" "mdm"
                 start_daemon $DAEMON
                 log_end_msg $?

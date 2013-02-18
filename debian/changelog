@@ -1,3 +1,10 @@
+aurex-artwork (12.04.20) precise; urgency=low
+
+  * Use plymouth-stop upstart job to stops the plymouth splash screen
+    to avoid it doing a VT switch
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Mon, 18 Feb 2013 08:21:16 +0100
+
 aurex-artwork (12.04.19ubuntu1) precise; urgency=low
 
   * added id="clock" in clock label of mdm theme, to get time
