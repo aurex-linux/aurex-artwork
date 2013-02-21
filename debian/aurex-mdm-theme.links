@@ -1,1 +1,1 @@
-/lib/init/upstart-job	/etc/init.d/aurex-mdm
+/lib/init/upstart-job	/etc/init.d/mdm-aurex

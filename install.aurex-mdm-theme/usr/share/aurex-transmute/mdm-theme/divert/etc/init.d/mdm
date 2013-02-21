@@ -17,11 +17,12 @@ set -e
 cat <<EOF
 Warning!!!!!
 This is just an useless dummy script and it does NOTHING AT ALL about the mdm display manager.
+
 Please use
-	/etc/init.d/aurex-mdm $1
+	/etc/init.d/mdm-aurex $1
 instead !!!!
 
-In aurex, mdm has been converted to upstart, and the service name is aurex-mdm
-you can use the service command or the /etc/init.d/aurex-mdm link to manage the service
+In aurex, mdm has been converted to upstart, and the service name is mdm-aurex
+you can use the service command or the /etc/init.d/mdm-aurex link to manage the service
 EOF
 exit 0
