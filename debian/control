@@ -73,7 +73,7 @@ Description: Aurex artwork for Ubiquity live installer
 
 Package: aurex-lightdm-theme
 Architecture: all
-Depends: ${misc:Depends}, aurex-transmute, ubunut-mono, unity-greeter, lightdm, aurex-icon-theme, libglib2.0-bin
+Depends: ${misc:Depends}, aurex-transmute, ubuntu-mono, unity-greeter, lightdm, aurex-icon-theme, libglib2.0-bin
 Description: Aurex artwork for lightdm display manager
  This package provides aurex branding and configuration for
  lightdm display manager using unitiy-greeter
