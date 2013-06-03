@@ -21,7 +21,7 @@ case "$1" in
     remove|upgrade|deconfigure)
 	aurex-transmute --module=lightdm untransmute || true
         glib-compile-schemas /usr/share/glib-2.0/schemas/ || true
-        /usr/lib/lightdm/lightdm-set-defaults -g unity-greeter -s ubuntu  || true
+        /usr/lib/lightdm/lightdm-set-defaults -g unity-greeter -s ubuntu -i false || true
     ;;
 
     failed-upgrade)
