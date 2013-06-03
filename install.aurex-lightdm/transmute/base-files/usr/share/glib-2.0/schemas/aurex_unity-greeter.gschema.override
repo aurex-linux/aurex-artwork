@@ -1,0 +1,8 @@
+[com.canonical.unity-greeter]
+draw-user-backgrounds=false
+background='/usr/share/unity-greeter/aurex-background.png'
+theme-name='aurex'
+icon-theme-name='ubuntu-mono-dark'
+background-logo='/usr/share/icons/aurex/places/48/distributor-logo.png'
+background-color='#9e9e9e'
+logo='/usr/share/unity-greeter/aurex-logo.png'

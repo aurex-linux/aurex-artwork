@@ -1,3 +1,10 @@
+aurex-artwork (12.04.22) precise; urgency=low
+
+  * added aurex-lightdm-theme to use lightdm with
+    unity-greeter as alternative display manager 
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Mon, 03 Jun 2013 02:00:52 +0200
+
 aurex-artwork (12.04.21) precise; urgency=low
 
   * mdm init script migrated to upstart as aurex-mdm

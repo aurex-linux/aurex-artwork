@@ -10,8 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
-   width="744.09448"
-   height="1052.3622"
+   width="653.61395"
+   height="205.47884"
    id="svg3842"
    inkscape:version="0.48.3.1 r9886"
    sodipodi:docname="aurex-new-logo.svg"
@@ -26,7 +26,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -39,20 +39,24 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1366"
-     inkscape:window-height="689"
+     inkscape:window-width="1440"
+     inkscape:window-height="821"
      id="namedview23"
      showgrid="false"
      inkscape:zoom="0.44851478"
-     inkscape:cx="98.76879"
-     inkscape:cy="541.01253"
+     inkscape:cx="59.710567"
+     inkscape:cy="-250.91237"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg3842"
      showguides="true"
      inkscape:guide-bbox="true"
-     borderlayer="true" />
+     borderlayer="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <defs
      id="defs3844">
     <inkscape:perspective
@@ -90,7 +94,7 @@
   </defs>
   <g
      id="g4000"
-     transform="matrix(3.0808042,0,0,3.0808042,398.53964,738.59407)"
+     transform="matrix(3.0808042,0,0,3.0808042,359.48142,683.63563)"
      inkscape:export-filename="/datos/usuarios/profesores/lgarciag/Documentos/aurex-logo-small.png"
      inkscape:export-xdpi="299.51947"
      inkscape:export-ydpi="299.51947">

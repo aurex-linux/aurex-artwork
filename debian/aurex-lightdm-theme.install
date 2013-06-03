@@ -1,0 +1,2 @@
+install.aurex-lightdm/unity-greeter/*	/usr/share/unity-greeter
+install.aurex-lightdm/transmute/*	/usr/share/aurex-transmute/lightdm
