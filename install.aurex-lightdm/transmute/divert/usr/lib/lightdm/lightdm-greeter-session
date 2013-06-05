@@ -1,0 +1,7 @@
+#!/bin/sh
+
+STATE_FILE="/var/lib/lightdm/.cache/unity-greeter/state"
+if [ -e "$STATE_FILE" ] ; then
+	sed -i -e "/^last\-user=/s%=.*$%=*other%" "$STATE_FILE"
+fi
+exec "$0.aurex-divert" "$@"

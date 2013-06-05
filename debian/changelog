@@ -1,3 +1,11 @@
+aurex-artwork (12.04.24) precise; urgency=low
+
+  * aurex-lightdm-theme: divert /usr/lib/lightdm/lightdm-greeter-session to
+    reset 'last-user' setting in /var/lib/lightdm/.cache/unity-greeter/state file
+    to "forget" last login and force unity-greeter to ask username
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Wed, 05 Jun 2013 08:55:41 +0200
+
 aurex-artwork (12.04.23) precise; urgency=low
 
   * Set hide-users to true to simplify network users access
