@@ -7,16 +7,16 @@ Standards-Version: 3.8.4
 
 Package: aurex-gtk-theme
 Architecture: all
-Depends: ${misc:Depends}, clearlooks-phenix-theme, radiance-colors-xfce-lxde, aurex-icon-theme, aurex-wallpaper-theme, aurex-icon-theme
+Depends: ${misc:Depends}, radiance-dark-panel-theme, zoncolor-themes, aurex-icon-theme, aurex-wallpaper-theme, aurex-icon-theme
 #, gnome-screensaver, aurex-gdm-theme
 Description: Aurex 12.04 theme
  AureX full theme for GNOME/XFCE
 
 Package: aurex-icon-theme
 Architecture: all
-Depends: ${misc:Depends}, aurex-transmute, faience-icon-theme
+Depends: ${misc:Depends}, aurex-transmute, potenza
 Description: Aurex 12.04 icon theme
- AureX icon theme based on Faience-Azur
+ AureX icon theme based on potenza dark
 
 Package: aurex-wallpaper-theme
 Architecture: all

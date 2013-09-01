@@ -2,15 +2,15 @@
 
 case "$1" in
     configure)
-	# link Classic-Radiance-Blue-Xfce-LXDE theme
-	for d in metacity-1  openbox-3  unity  xfwm4 ; do
+	# link zoncolorLittle theme
+	for d in metacity-1 xfwm4 ; do
 		mkdir -p /usr/share/themes/aurex/$d
-		cp -aus /usr/share/themes/Classic-Radiance-Blue-Xfce-LXDE/$d/* /usr/share/themes/aurex/$d
+		cp -aus /usr/share/themes/zoncolorLittle/$d/* /usr/share/themes/aurex/$d
 	done
-	# link Clearlooks-Phenix gtk theme
-	for d in gtk-2.0  gtk-3.0 ; do
+	# link Radiance-Dark-Panel gtk theme
+	for d in gtk-2.0 gtk-3.0 unity ; do
 		mkdir -p /usr/share/themes/aurex/$d
-		cp -aus /usr/share/themes/Clearlooks-Phenix/$d/* /usr/share/themes/aurex/$d
+		cp -aus /usr/share/themes/Radiance-Dark-Panel/$d/* /usr/share/themes/aurex/$d
 	done
 	# Add/replace custom files
 	aurex-transmute --module=gtk-theme transmute || true
