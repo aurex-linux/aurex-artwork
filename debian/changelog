@@ -1,3 +1,12 @@
+aurex-artwork (12.04.30) precise; urgency=low
+
+  * New gtk theme based on Radiance-Dark-Panel theme
+  * New Windows decoration based on zoncolorLittle theme
+  * New icon theme from potenza-dark theme
+  * New wallpapers, grub image and plymouth themes
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Mon, 02 Sep 2013 07:33:59 +0200
+
 aurex-artwork (12.04.24) precise; urgency=low
 
   * aurex-lightdm-theme: divert /usr/lib/lightdm/lightdm-greeter-session to
