@@ -16,6 +16,7 @@ case "$1" in
 	ICON_DIR="/usr/share/icons/aurex/"
 	for d in $(ls $ICON_DIR 2>/dev/null) ; do
 		PLACES_DIR="$ICON_DIR/$d/places"
+		APPS_DIR="$ICON_DIR/$d/apps"
 		if [ -d "$PLACES_DIR" ] ; then
 			for t in png svg ; do
 				if [ -r $PLACES_DIR/distributor-logo-aurex.$t ] ; then
@@ -24,7 +25,10 @@ case "$1" in
 					ln -fs $PLACES_DIR/distributor-logo-aurex.$t $PLACES_DIR/xubuntu-logo-menu.$t
 					[ -r $PLACES_DIR/start-here-aurex.$t ] || ln -fs $PLACES_DIR/distributor-logo-aurex.$t $PLACES_DIR/start-here-aurex.$t
 					ln -fs $PLACES_DIR/start-here-aurex.$t $PLACES_DIR/start-here.$t
-					ln -s  $PLACES_DIR/distributor-logo-aurex.$t /usr/share/icons/aurex/$d/apps/xfce4-whiskermenu.$t
+					if [ -d "$APPS_DIR" ]; then
+						[ -r $APPS_DIR/xfce4-whiskermenu-aurex.$t ] || ln -fs $PLACES_DIR/distributor-logo-aurex.$t $APPS_DIR/xfce4-whiskermenu-aurex.$t
+						ln -fs $APPS_DIR/xfce4-whiskermenu-aurex.$t $APPS_DIR/xfce4-whiskermenu.$t
+					fi
 				fi
 			done
 		fi
