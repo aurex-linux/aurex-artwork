@@ -22,6 +22,7 @@ case "$1" in
 	aurex-transmute --module=plymouth-theme untransmute || true
 	update-alternatives --remove default.plymouth /lib/plymouth/themes/aurex-sunrise/aurex-sunrise.plymouth
 	update-alternatives --remove default.plymouth /lib/plymouth/themes/floating-aurex/floating-aurex.plymouth
+	update-alternatives --remove default.plymouth /lib/plymouth/themes/aurex-stargate/aurex-stargate.plymouth
 	update-alternatives --remove text.plymouth /lib/plymouth/themes/aurex-text/text.plymouth
 	[ "$1" != "remove" ] || update-initramfs -u
 

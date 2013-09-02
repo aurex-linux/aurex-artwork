@@ -5,6 +5,7 @@ case "$1" in
 	aurex-transmute --module=plymouth-theme transmute || true
 	update-alternatives --install /lib/plymouth/themes/default.plymouth default.plymouth /lib/plymouth/themes/aurex-sunrise/aurex-sunrise.plymouth 200
 	update-alternatives --install /lib/plymouth/themes/default.plymouth default.plymouth /lib/plymouth/themes/floating-aurex/floating-aurex.plymouth 212
+	update-alternatives --install /lib/plymouth/themes/default.plymouth default.plymouth /lib/plymouth/themes/aurex-stargate/aurex-stargate.plymouth 213
 	update-alternatives --install /lib/plymouth/themes/text.plymouth text.plymouth /lib/plymouth/themes/aurex-text/text.plymouth 200
 	update-initramfs -u
 	;;

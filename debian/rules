@@ -56,6 +56,8 @@ build-stamp: configure-stamp
 	space-sunrise/aurex/build-script build
 	# build floating-aurex plymouth required files
 	floatinglogo/aurex/build-script build
+	# build aurex-stargate plymouth required files
+	Stargate/aurex/build-script build
 	# build mdm required files
 	BlueMint/aurex/build-script build
 	Simply_Grace/aurex/build-script build
