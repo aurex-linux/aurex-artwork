@@ -3,11 +3,11 @@
 case "$1" in
     configure)
 	# link Faenza icon theme
-	cp -aus /usr/share/icons/potenza-dark/* /usr/share/icons/aurex
+	cp -aus /usr/share/icons/potenza/* /usr/share/icons/aurex
 	# Generate index.theme
 	TMPFILE="$(tempfile)"
-	cp -a /usr/share/icons/potenza-dark/index.theme $TMPFILE
-	sed -i -e "s%^Name=.*$%Name=aurex%;s%^Comment=.*$%Comment=aurex potenza dark Icon theme%" $TMPFILE
+	cp -a /usr/share/icons/potenza/index.theme $TMPFILE
+	sed -i -e "s%^Name=.*$%Name=aurex%;s%^Comment=.*$%Comment=aurex potenza Icon theme%" $TMPFILE
 	mv -f $TMPFILE /usr/share/icons/aurex/index.theme
 	# Add/replace custom files
 	aurex-transmute --module=icon-theme transmute || true

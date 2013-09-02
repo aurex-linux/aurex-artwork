@@ -31,7 +31,7 @@ style "default" {
 
 	GtkScrollbar::activate-slider = 1
 	GtkScrollbar::trough-border = 0
-	GtkScrollbar::slider-width = 9
+	GtkScrollbar::slider-width = 13
 	GtkScrollbar::min-slider-length = 31
 
 	GtkMenuBar::internal-padding = 0

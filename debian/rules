@@ -9,7 +9,7 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-ICON_SIZES = 16 22 24 32 48
+ICON_SIZES = 16 22 32 48 96 128 256 512
 UBIQUITY_BASEDIR = install.aurex-ubiquity-theme/usr/share/aurex-transmute/ubiquity-theme/divert
 
 configure:configure-stamp
@@ -49,8 +49,10 @@ build-stamp: configure-stamp
 	touch build-stamp
 
 	# generate replacement icons
-	for D in aurex-logos/icons/* ; do d=install.aurex-icon-theme/icons/$${D##*/}; for F in $$D/*.svg; do fsvg=$${F##*/}; f=$${fsvg%.svg}; mkdir -p $$d/scalable; cp $$F $$d/scalable/$$fsvg; for s in $(ICON_SIZES) ; do mkdir -p $$d/$$s ; inkscape --without-gui --file=$$F --export-width=$$s --export-height=$$s --export-png=$$d/$$s/$$f.png ; done; done; done
-	for D in aurex-logos/icons/* ; do d=install.aurex-icon-theme/icons/$${D##*/}; for F in $$D/*.alias; do fbase=$${F##*/}; f=$${fbase%.alias}; mkdir -p $$d/scalable; for a in `cat $$F`; do cp $$d/scalable/$$f.svg $$d/scalable/$$a.svg; done; for s in $(ICON_SIZES) ; do mkdir -p $$d/$$s ; for a in `cat $$F`; do cp $$d/$$s/$$f.png $$d/$$s/$$a.png; done; done; done; done
+	# for D in aurex-logos/icons/* ; do d=install.aurex-icon-theme/icons/$${D##*/}; for F in $$D/*.svg; do fsvg=$${F##*/}; f=$${fsvg%.svg}; mkdir -p $$d/scalable; cp $$F $$d/scalable/$$fsvg; for s in $(ICON_SIZES) ; do mkdir -p $$d/$$s ; inkscape --without-gui --file=$$F --export-width=$$s --export-height=$$s --export-png=$$d/$$s/$$f.png ; done; done; done
+	# for D in aurex-logos/icons/* ; do d=install.aurex-icon-theme/icons/$${D##*/}; for F in $$D/*.alias; do fbase=$${F##*/}; f=$${fbase%.alias}; mkdir -p $$d/scalable; for a in `cat $$F`; do cp $$d/scalable/$$f.svg $$d/scalable/$$a.svg; done; for s in $(ICON_SIZES) ; do mkdir -p $$d/$$s ; for a in `cat $$F`; do cp $$d/$$s/$$f.png $$d/$$s/$$a.png; done; done; done; done
+	for D in aurex-logos/icons/* ; do d=install.aurex-icon-theme/icons; for F in $$D/*.svg; do fsvg=$${F##*/}; f=$${fsvg%.svg}; for s in $(ICON_SIZES) ; do mkdir -p $$d/$$sx$$s/$${D##*/} ; inkscape --without-gui --file=$$F --export-width=$$s --export-height=$$s --export-png=$$d/$$sx$$s/$${D##*/}/$$f.png ; done; done; done
+	for D in aurex-logos/icons/* ; do d=install.aurex-icon-theme/icons; for F in $$D/*.alias; do fbase=$${F##*/}; f=$${fbase%.alias}; for a in `cat $$F`; for s in $(ICON_SIZES) ; do mkdir -p $$d/$$sx$$s/$${D##*/} ; for a in `cat $$F`; do cp $$d/$$sx$$s/$${D##*/}/$$f.png $$d/$$sx$$s/$${D##*/}/$$a.png; done; done; done; done
 
 	# build aurex-sunrise plymouth required files
 	space-sunrise/aurex/build-script build
