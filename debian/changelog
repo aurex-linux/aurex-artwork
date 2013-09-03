@@ -1,3 +1,9 @@
+aurex-artwork (12.04.34) precise; urgency=low
+
+  * Update grub colors to acomodate new background
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Tue, 03 Sep 2013 11:23:54 +0200
+
 aurex-artwork (12.04.33) precise; urgency=low
 
   * Added some icons from Faenza for Network Manager animation
