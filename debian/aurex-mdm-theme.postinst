@@ -4,6 +4,8 @@ case "$1" in
     configure)
 	# divert original lightdm/mdm settings
 	aurex-transmute --module=mdm-theme transmute || true
+	# force use of lightdm
+	echo "/usr/isbin/lightdm" > /etc/X11/default-display-manager
 	;;
     abort-upgrade|abort-remove|abort-deconfigure)
     	;;

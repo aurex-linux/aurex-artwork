@@ -1,3 +1,11 @@
+aurex-artwork (12.04.33) precise; urgency=low
+
+  * Added some icons from Faenza for Network Manager animation
+  * aurex-mdm-theme updated. The package is now just a transitional
+    package to help the migration to lightdm Display manager
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Tue, 03 Sep 2013 10:15:30 +0200
+
 aurex-artwork (12.04.32) precise; urgency=low
 
   * New icon for Whisker menu

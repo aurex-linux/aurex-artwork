@@ -114,6 +114,10 @@ Files: bitmaps//bus-ibiza.jpg
 Copyright: Copyright 2013 Luis Antonio Garcia Gisbert <luisgg@gmail.com>
 License: GPL-3+
 
+Files: install.aurex-icon-theme/icons-static/22x22/apps/nm-*.png
+Copyright: Copyright 2010 Matthieu James <matthieu.james@gmail.com>
+License: GPL-3
+
 Files: space-sunrise/space-sunrise-logo.script
 Copyright: Copyright 2010-2011 tj c (User: inameiname on gnome-look.org)
 License: GPL-3+

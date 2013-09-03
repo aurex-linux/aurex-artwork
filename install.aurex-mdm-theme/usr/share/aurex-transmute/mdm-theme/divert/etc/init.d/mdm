@@ -16,13 +16,9 @@
 set -e
 cat <<EOF
 Warning!!!!!
+mdm must be DEFINITELY removed from aurex!!!
+Please contact your system administrator to purge mdm and aurex-mdm-theme packages
+
 This is just an useless dummy script and it does NOTHING AT ALL about the mdm display manager.
-
-Please use
-	/etc/init.d/mdm-aurex $1
-instead !!!!
-
-In aurex, mdm has been converted to upstart, and the service name is mdm-aurex
-you can use the service command or the /etc/init.d/mdm-aurex link to manage the service
 EOF
 exit 0
