@@ -14,7 +14,7 @@ Description: Aurex 12.04 theme
 
 Package: aurex-icon-theme
 Architecture: all
-Depends: ${misc:Depends}, aurex-transmute, potenza
+Depends: ${misc:Depends}, aurex-transmute, potenza, rsync
 Description: Aurex 12.04 icon theme
  AureX icon theme based on potenza dark
 

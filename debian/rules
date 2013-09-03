@@ -74,7 +74,8 @@ build-stamp: configure-stamp
 
 	# generate lightdm images
 	mkdir -p install.aurex-lightdm/unity-greeter
-	xcf2png aurex-logos/aurex-mdm-simply.xcf > install.aurex-lightdm/unity-greeter/aurex-background.png
+	# xcf2png aurex-logos/aurex-mdm-simply.xcf > install.aurex-lightdm/unity-greeter/aurex-background.png
+	xcf2png wallpapers/aurex-color.xcf > install.aurex-lightdm/unity-greeter/aurex-background.png
 	xcf2png aurex-logos/custom_aurex_badge.xcf > install.aurex-lightdm/unity-greeter/custom_aurex_badge.png
 	inkscape --without-gui --file=aurex-logos/aurex-12.04.svg --export-width=245 --export-png=install.aurex-lightdm/unity-greeter/aurex-logo.png
 

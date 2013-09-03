@@ -4,6 +4,13 @@ case "$1" in
     configure)
 	# link Faenza icon theme
 	cp -aus /usr/share/icons/potenza/* /usr/share/icons/aurex
+	# replace status icons
+	STATUS_DIR="/usr/share/icons/potenza-dark/status"
+	for d in $(ls $STATUS_DIR 2>/dev/null) ; do
+		if [ -d "$STATUS_DIR/$d" ] && [ -d "/usr/share/icons/aurex/${d}x${d}/status" ] ; then
+			rsync -a "$STATUS_DIR/$d/" "/usr/share/icons/aurex/${d}x${d}/status/" || true
+		fi
+	done
 	# Generate index.theme
 	TMPFILE="$(tempfile)"
 	cp -a /usr/share/icons/potenza/index.theme $TMPFILE
