@@ -34,6 +34,7 @@ case "$1" in
 					ln -fs $PLACES_DIR/start-here-aurex.$t $PLACES_DIR/start-here.$t
 					if [ -d "$APPS_DIR" ]; then
 						[ -r $APPS_DIR/xfce4-whiskermenu-aurex.$t ] || ln -fs $PLACES_DIR/distributor-logo-aurex.$t $APPS_DIR/xfce4-whiskermenu-aurex.$t
+						ln -fs $APPS_DIR/xfce4-whiskermenu-aurex.$t $APPS_DIR/xfce4-whiskermenu.$t
 						[ -r $APPS_DIR/xfce4-panel-menu-aurex.$t ] || ln -fs $PLACES_DIR/distributor-logo-aurex.$t $APPS_DIR/xfce4-panel-menu-aurex.$t
 						ln -fs $APPS_DIR/xfce4-panel-menu-aurex.$t $APPS_DIR/xfce4-panel-menu.$t
 					fi
