@@ -110,9 +110,13 @@ Files: bitmaps/mathematics-phi-HD-Wallpapers.png
 Copyright: Copyright http://deskpoper.com/mathematics-phi-513/
 License: free (unspecified)
 
-Files: bitmaps//bus-ibiza.jpg
+Files: bitmaps/bus-ibiza.jpg
 Copyright: Copyright 2013 Luis Antonio Garcia Gisbert <luisgg@gmail.com>
 License: GPL-3+
+
+Files: bitmaps/img1347179986.jpg
+Copyright: Copyright 2012 bgfons (http://bgfons.com/)
+License: free (unspecified)
 
 Files: install.aurex-icon-theme/icons-static/22x22/apps/nm-*.png
 Copyright: Copyright 2010 Matthieu James <matthieu.james@gmail.com>

@@ -1,3 +1,9 @@
+aurex-artwork (12.04.35) precise; urgency=low
+
+  * Fixed aurex-stargate plymouth theme
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Tue, 03 Sep 2013 12:24:52 +0200
+
 aurex-artwork (12.04.34) precise; urgency=low
 
   * Update grub colors to acomodate new background

@@ -12,11 +12,11 @@ case "$1" in
 			f="$(basename "$F")"
 			fxcf="$(basename "$F" ".png").xcf"
 			if [ -r "$WORK_DIR/$f" ] ; then
-				FF="$WORK_DIR/$f"
+				cp "$WORK_DIR/$f" $WORK_DIR/install/$f
 			elif [ -r "$WORK_DIR/$fxcf" ] ; then
 				xcf2png "$WORK_DIR/$fxcf" > $WORK_DIR/install/$f
 			elif [ -r "$F" ] ; then
-				FF="$F"
+				cp "$F" $WORK_DIR/install/$f
 			fi
 		done
 		cp $WORK_DIR/*.script $WORK_DIR/*plymouth $WORK_DIR/../README* $WORK_DIR/README* $WORK_DIR/install/
