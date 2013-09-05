@@ -1,3 +1,11 @@
+aurex-artwork (12.04.37) precise; urgency=low
+
+  * Updated lightdm theme
+  * Removed lightdm hide-user parameter settings. This parameter is managed now by
+    ausias-cc-default-settings package
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Thu, 05 Sep 2013 09:56:47 +0200
+
 aurex-artwork (12.04.36) precise; urgency=low
 
   * Updated wallpapers

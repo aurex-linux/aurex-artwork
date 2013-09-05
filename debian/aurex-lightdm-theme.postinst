@@ -4,7 +4,7 @@ case "$1" in
     configure)
 	aurex-transmute --module=lightdm transmute || true
 	glib-compile-schemas /usr/share/glib-2.0/schemas/ || true
-	/usr/lib/lightdm/lightdm-set-defaults -g unity-greeter -s aurex -m true -i true || true
+	/usr/lib/lightdm/lightdm-set-defaults -g unity-greeter -s aurex -m true || true
 	;;
     abort-upgrade|abort-remove|abort-deconfigure)
     	;;
