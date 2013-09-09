@@ -1,3 +1,9 @@
+aurex-artwork (12.04.38) precise; urgency=low
+
+  * Added depends on aurex-nice-boot-settings
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Mon, 09 Sep 2013 18:04:14 +0200
+
 aurex-artwork (12.04.37) precise; urgency=low
 
   * Updated lightdm theme
