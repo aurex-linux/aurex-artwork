@@ -51,7 +51,7 @@ Description: Aurex 12.04 gdm configuration
 
 Package: aurex-boot-theme
 Architecture: all
-Depends: ${misc:Depends}, aurex-transmute, grub-pc, aurex-nice-boot-settings || aurex-boot-settings
+Depends: ${misc:Depends}, aurex-transmute, grub-pc, aurex-nice-boot-settings | aurex-boot-settings
 Description: Aurex 12.04 GRUB theme
  AureX splashimage to be used with GRUB
 
