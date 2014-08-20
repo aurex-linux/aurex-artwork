@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=aurex-elementary theme
+Description=Simple mod of ElementaryOsBlueAviator theme
+ModuleName=script
+
+[script]
+ImageDir=/lib/plymouth/themes/aurex-elementary
+ScriptFile=/lib/plymouth/themes/aurex-elementary/aurex-elementary.script

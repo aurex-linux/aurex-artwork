@@ -122,6 +122,14 @@ Files: bitmaps/img1347179989.jpg
 Copyright: Copyright 2012 bgfons (http://bgfons.com/)
 License: free (unspecified)
 
+Files: bitmaps/inspiringwallpapers.net-camera-lens-wallpaper-1366x768.jpg
+Copyright: Copyright 2014 Paul Mood (http://www.inspiringwallpapers.net)
+License: free (unspecified)
+
+Files: bitmaps/inspiringwallpapers.net-apple_music-1920x1080-1366x768.jpg
+Copyright: Copyright 2013 Paul Mood (http://www.inspiringwallpapers.net)
+License: free (unspecified)
+
 Files: install.aurex-icon-theme/icons-static/22x22/apps/nm-*.png
 Copyright: Copyright 2010 Matthieu James <matthieu.james@gmail.com>
 License: GPL-3
@@ -168,6 +176,22 @@ License: Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)
 
 Files: Simply_Grace/aurex/*
 Copyright: Copyright 2012 Luis Antonio Garcia Gisbert <luisgg@gmail.com>
+License: GPL-3+
+
+Files: vizta/*
+Copyright: Copyright 2009 Charles Brej <cb@cs.man.ac.uk>
+License: free (unspecified)
+
+Files: vizta/aurex/*
+Copyright: Copyright 2014 Luis Antonio Garcia Gisbert <luisgg@gmail.com>
+License: GPL-3+
+
+Files: elementaryOsBlueAviator/*
+Copyright: Copyright 2012 raoul223 (http://raoul223.deviantart.com/)
+License: CC-nc-by-sa
+
+Files: elementaryOsBlueAviator/aurex/*
+Copyright: Copyright 2014 Luis Antonio Garcia Gisbert <luisgg@gmail.com>
 License: GPL-3+
 
 

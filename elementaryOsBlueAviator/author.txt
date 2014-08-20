@@ -1,0 +1,5 @@
+This theme has been developped by Mathieu Labendzki, based on the themes of Ivan Cizik (http://www.ubunturoot.com/)
+
+Feel free to modify, improve or customize this plymouth !
+
+CC-nc-by-sa

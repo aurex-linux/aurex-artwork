@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=aurex-vizta
+Description=aurex vizta plugin.
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/aurex-vizta
+ScriptFile=/usr/share/plymouth/themes/vizta/aurex-vizta.script

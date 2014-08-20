@@ -9,7 +9,7 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-ICON_SIZES = 16 22 32 48 96 128 256 512
+ICON_SIZES =  16  22  24  32  48
 UBIQUITY_BASEDIR = install.aurex-ubiquity-theme/usr/share/aurex-transmute/ubiquity-theme/divert
 
 configure:configure-stamp
@@ -45,14 +45,14 @@ build-stamp: configure-stamp
 	for d in pixmaps ubiquity/pixmaps/ubuntu ; do for F in aurex-logos/ubiquity/$$d/*.svg; do fsvg=$${F##*/}; f=$${fsvg%.svg}; mkdir -p $(UBIQUITY_BASEDIR)/usr/share/$$d ; inkscape --without-gui --file=$$F --export-png=$(UBIQUITY_BASEDIR)/usr/share/$$d/$$f.png ; done ; done
 
 	# generate grub splash
-	for F in grub/*.xcf ; do f=$${F%.xcf}; xcf2png $$F >$$f.png; done
+	#for F in grub/*.xcf ; do f=$${F%.xcf}; xcf2png $$F >$$f.png; done
 	touch build-stamp
 
 	# generate replacement icons
-	# for D in aurex-logos/icons/* ; do d=install.aurex-icon-theme/icons/$${D##*/}; for F in $$D/*.svg; do fsvg=$${F##*/}; f=$${fsvg%.svg}; mkdir -p $$d/scalable; cp $$F $$d/scalable/$$fsvg; for s in $(ICON_SIZES) ; do mkdir -p $$d/$$s ; inkscape --without-gui --file=$$F --export-width=$$s --export-height=$$s --export-png=$$d/$$s/$$f.png ; done; done; done
-	# for D in aurex-logos/icons/* ; do d=install.aurex-icon-theme/icons/$${D##*/}; for F in $$D/*.alias; do fbase=$${F##*/}; f=$${fbase%.alias}; mkdir -p $$d/scalable; for a in `cat $$F`; do cp $$d/scalable/$$f.svg $$d/scalable/$$a.svg; done; for s in $(ICON_SIZES) ; do mkdir -p $$d/$$s ; for a in `cat $$F`; do cp $$d/$$s/$$f.png $$d/$$s/$$a.png; done; done; done; done
-	for D in aurex-logos/icons/* ; do d=install.aurex-icon-theme/icons; for F in $$D/*.svg; do fsvg=$${F##*/}; f=$${fsvg%.svg}; for s in $(ICON_SIZES) ; do mkdir -p $$d/$${s}x$${s}/$${D##*/} ; inkscape --without-gui --file=$$F --export-width=$$s --export-height=$$s --export-png=$$d/$${s}x$${s}/$${D##*/}/$$f.png ; done; done; done
-	for D in aurex-logos/icons/* ; do d=install.aurex-icon-theme/icons; for F in $$D/*.alias; do fbase=$${F##*/}; f=$${fbase%.alias}; for s in $(ICON_SIZES) ; do mkdir -p $$d/$${s}x$${s}/$${D##*/} ; for a in `cat $$F`; do cp $$d/$${s}x$${s}/$${D##*/}/$$f.png $$d/$${s}x$${s}/$${D##*/}/$$a.png; done; done; done; done
+	for D in aurex-logos/icons/* ; do d=install.aurex-icon-theme/icons/$${D##*/}; for F in $$D/*.svg; do fsvg=$${F##*/}; f=$${fsvg%.svg}; mkdir -p $$d/scalable; cp $$F $$d/scalable/$$fsvg; for s in $(ICON_SIZES) ; do mkdir -p $$d/$$s ; inkscape --without-gui --file=$$F --export-width=$$s --export-height=$$s --export-png=$$d/$$s/$$f.png ; done; done; done
+	for D in aurex-logos/icons/* ; do d=install.aurex-icon-theme/icons/$${D##*/}; for F in $$D/*.alias; do fbase=$${F##*/}; f=$${fbase%.alias}; mkdir -p $$d/scalable; for a in `cat $$F`; do cp $$d/scalable/$$f.svg $$d/scalable/$$a.svg; done; for s in $(ICON_SIZES) ; do mkdir -p $$d/$$s ; for a in `cat $$F`; do cp $$d/$$s/$$f.png $$d/$$s/$$a.png; done; done; done; done
+#	for D in aurex-logos/icons/* ; do d=install.aurex-icon-theme/icons; for F in $$D/*.svg; do fsvg=$${F##*/}; f=$${fsvg%.svg}; for s in $(ICON_SIZES) ; do mkdir -p $$d/$${s}x$${s}/$${D##*/} ; inkscape --without-gui --file=$$F --export-width=$$s --export-height=$$s --export-png=$$d/$${s}x$${s}/$${D##*/}/$$f.png ; done; done; done
+#	for D in aurex-logos/icons/* ; do d=install.aurex-icon-theme/icons; for F in $$D/*.alias; do fbase=$${F##*/}; f=$${fbase%.alias}; for s in $(ICON_SIZES) ; do mkdir -p $$d/$${s}x$${s}/$${D##*/} ; for a in `cat $$F`; do cp $$d/$${s}x$${s}/$${D##*/}/$$f.png $$d/$${s}x$${s}/$${D##*/}/$$a.png; done; done; done; done
 
 	# build aurex-sunrise plymouth required files
 	space-sunrise/aurex/build-script build
@@ -61,9 +61,11 @@ build-stamp: configure-stamp
 	# build aurex-stargate plymouth required files
 	Stargate/aurex/build-script build
 	# build mdm required files
-	BlueMint/aurex/build-script build
-	Simply_Grace/aurex/build-script build
-	mkdir -p install.fatcli-mdm/divert; xcf2png aurex-logos/aurex-fatcli-mdm.xcf > install.fatcli-mdm/divert/bg.png
+	#BlueMint/aurex/build-script build
+	#Simply_Grace/aurex/build-script build
+	#mkdir -p install.fatcli-mdm/divert; xcf2png aurex-logos/aurex-fatcli-mdm.xcf > install.fatcli-mdm/divert/bg.png
+	# build aurex-elementary plymouth required files
+	elementaryOsBlueAviator/aurex/build-script build
 
 	mkdir -p install.translive
 	for F in aurex-logos/translive/*.svg ; do ff=$${F%.svg}; f=$${ff##*/}; inkscape --without-gui --file=$$F --export-png=install.translive/$$f.png ; done
@@ -77,7 +79,7 @@ build-stamp: configure-stamp
 	# xcf2png aurex-logos/aurex-mdm-simply.xcf > install.aurex-lightdm/unity-greeter/aurex-background.png
 	xcf2png aurex-logos/aurex-lightdm.xcf > install.aurex-lightdm/unity-greeter/aurex-background.png
 	xcf2png aurex-logos/custom_aurex_badge.xcf > install.aurex-lightdm/unity-greeter/custom_aurex_badge.png
-	inkscape --without-gui --file=aurex-logos/aurex-12.04.svg --export-width=245 --export-png=install.aurex-lightdm/unity-greeter/aurex-logo.png
+	inkscape --without-gui --file=aurex-logos/aurex-14.04.svg --export-width=245 --export-png=install.aurex-lightdm/unity-greeter/aurex-logo.png
 
 	
 

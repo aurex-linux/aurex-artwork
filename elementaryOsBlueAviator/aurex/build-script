@@ -1,0 +1,27 @@
+#!/bin/sh
+set -e
+WORK_DIR="$(dirname "$0")"
+
+case "$1" in
+	clean)
+		rm -rf $WORK_DIR/install
+		;;
+	*)
+		mkdir $WORK_DIR/install
+		for F in $WORK_DIR/../*png ; do
+			f="$(basename "$F")"
+			fxcf="$(basename "$F" ".png").xcf"
+			if [ -r "$WORK_DIR/$f" ] ; then
+				cp "$WORK_DIR/$f" $WORK_DIR/install/$f
+			elif [ -r "$WORK_DIR/$fxcf" ] ; then
+				xcf2png "$WORK_DIR/$fxcf" > $WORK_DIR/install/$f
+			elif [ -r "$F" ] ; then
+				cp "$F" $WORK_DIR/install/$f
+			fi
+		done
+		cp $WORK_DIR/*.script $WORK_DIR/*plymouth $WORK_DIR/../*.txt $WORK_DIR/install/
+		;;
+esac
+
+exit 0
+
