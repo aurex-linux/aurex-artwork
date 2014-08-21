@@ -7,65 +7,41 @@ Standards-Version: 3.8.4
 
 Package: aurex-gtk-theme
 Architecture: all
-Depends: ${misc:Depends}, radiance-dark-panel-theme, zoncolor-themes, aurex-icon-theme, aurex-wallpaper-theme, aurex-icon-theme
+Depends: ${misc:Depends}, greybird-gtk-theme, radiance-colors, aurex-icon-theme, aurex-wallpaper-theme, aurex-icon-theme
 #, gnome-screensaver, aurex-gdm-theme
-Description: Aurex 12.04 theme
+Description: Aurex 14.04 theme
  AureX full theme for GNOME/XFCE
 
 Package: aurex-icon-theme
 Architecture: all
-Depends: ${misc:Depends}, aurex-transmute, potenza, rsync
-Description: Aurex 12.04 icon theme
- AureX icon theme based on potenza dark
+Depends: ${misc:Depends}, aurex-transmute, flatwoken-icon-theme, rsync
+Description: Aurex 14.04 icon theme
+ AureX icon theme based on FlatWoken
 
 Package: aurex-wallpaper-theme
 Architecture: all
 Depends: ${misc:Depends}
-Description: Aurex 12.04 wallpaper theme
+Description: Aurex 14.04 wallpaper theme
  AureX wallpaper theme
-
-Package: aurex-mdm-theme
-Architecture: all
-Section: x11
-Depends: ${misc:Depends}, aurex-transmute (>=0.26), mdm (>=1.0.7-0~webupd8~precise), aurex-icon-theme, aurex-lightdm-theme
-Description: Aurex 12.04 mdm configuration
- AureX 12.04 default mdm settings
- This is a dummy package to aid in transitioning from mdm
- to the lightdm display manager.
- .
- mdm and this dummy package may be safely removed after upgrading
-
-Package: aurex-fatcli-mdm
-Architecture: all
-Section: x11
-Depends: ${misc:Depends}, aurex-transmute (>=0.26), mdm (>=1.0.7-0~webupd8~precise), aurex-mdm-theme
-Description: Aurex 12.04 Fat Clients mdm configuration
- AureX 12.04 Fat Clients mdm settings
-
-Package: aurex-gdm-theme
-Architecture: all
-Section: x11
-Depends: ${misc:Depends}, aurex-transmute, gdm, aurex-wallpaper-theme
-Description: Aurex 12.04 gdm configuration
- AureX 12.04 default gdm settings
 
 Package: aurex-boot-theme
 Architecture: all
 Depends: ${misc:Depends}, aurex-transmute, grub-pc, aurex-nice-boot-settings | aurex-boot-settings
-Description: Aurex 12.04 GRUB theme
- AureX splashimage to be used with GRUB
+Description: Aurex 14.04 GRUB theme
+ AureX grub2 theme
 
 Package: aurex-plymouth-theme
 Architecture: all
 Depends: ${misc:Depends}, aurex-transmute, plymouth, plymouth-label, plymouth-theme-script, plymouth-theme-text
-Description: Aurex 12.04 plymouth theme
- This package installs floating-aurex plymouth theme, based on floating-logo.
- The old aurex-sunrise plymouth theme is also installed.
+Description: Aurex 14.04 plymouth theme
+ This package installs aurex-elementary theme, based on ElementaryOsBlueAviator.
+ Old plymouth themes: aurex-stargate, floating-aurex and aurex-sunrise
+ are also installed.
 
 Package: aurex-translive-theme
 Architecture: all
 Depends: ${misc:Depends}
-Description: Aurex 12.04 translive artwork
+Description: Aurex 14.04 translive artwork
  This package installs aurex-translive splash images
 
 Package: aurex-ubiquity-theme
@@ -80,5 +56,5 @@ Architecture: all
 Depends: ${misc:Depends}, aurex-transmute, ubuntu-mono, unity-greeter, lightdm, aurex-icon-theme, libglib2.0-bin
 Description: Aurex artwork for lightdm display manager
  This package provides aurex branding and configuration for
- lightdm display manager using unitiy-greeter
+ lightdm display manager using unity-greeter
 

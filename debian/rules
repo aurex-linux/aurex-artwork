@@ -45,7 +45,7 @@ build-stamp: configure-stamp
 	for d in pixmaps ubiquity/pixmaps/ubuntu ; do for F in aurex-logos/ubiquity/$$d/*.svg; do fsvg=$${F##*/}; f=$${fsvg%.svg}; mkdir -p $(UBIQUITY_BASEDIR)/usr/share/$$d ; inkscape --without-gui --file=$$F --export-png=$(UBIQUITY_BASEDIR)/usr/share/$$d/$$f.png ; done ; done
 
 	# generate grub splash
-	#for F in grub/*.xcf ; do f=$${F%.xcf}; xcf2png $$F >$$f.png; done
+	for F in grub/*.xcf ; do f=$${F%.xcf}; xcf2png $$F >$$f.png; done
 	touch build-stamp
 
 	# generate replacement icons
@@ -60,12 +60,12 @@ build-stamp: configure-stamp
 	floatinglogo/aurex/build-script build
 	# build aurex-stargate plymouth required files
 	Stargate/aurex/build-script build
+	# build aurex-elementary plymouth required files
+	elementaryOsBlueAviator/aurex/build-script build
 	# build mdm required files
 	#BlueMint/aurex/build-script build
 	#Simply_Grace/aurex/build-script build
 	#mkdir -p install.fatcli-mdm/divert; xcf2png aurex-logos/aurex-fatcli-mdm.xcf > install.fatcli-mdm/divert/bg.png
-	# build aurex-elementary plymouth required files
-	elementaryOsBlueAviator/aurex/build-script build
 
 	mkdir -p install.translive
 	for F in aurex-logos/translive/*.svg ; do ff=$${F%.svg}; f=$${ff##*/}; inkscape --without-gui --file=$$F --export-png=install.translive/$$f.png ; done

@@ -20,6 +20,8 @@ set -e
 case "$1" in
     remove|upgrade|deconfigure)
 	aurex-transmute --module=boot-theme untransmute || true
+	update-grub || true
+
     ;;
 
     failed-upgrade)

@@ -2,9 +2,8 @@
 
 case "$1" in
     configure)
-	cp /usr/share/aurex-transmute/boot-theme/divert/usr/share/grub/default/grub /etc/default/grub
-	update-grub || true
 	aurex-transmute --module=boot-theme transmute || true
+	update-grub || true
 	;;
     abort-upgrade|abort-remove|abort-deconfigure)
     	;;
