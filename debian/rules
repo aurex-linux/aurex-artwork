@@ -48,6 +48,9 @@ build-stamp: configure-stamp
 	for F in grub/*.xcf ; do f=$${F%.xcf}; xcf2png $$F >$$f.png; done
 	touch build-stamp
 
+	# generate grub themes
+	grub-themes/aurex-arch/build-script build
+
 	# generate replacement icons
 	for D in aurex-logos/icons/* ; do d=install.aurex-icon-theme/icons/$${D##*/}; for F in $$D/*.svg; do fsvg=$${F##*/}; f=$${fsvg%.svg}; mkdir -p $$d/scalable; cp $$F $$d/scalable/$$fsvg; for s in $(ICON_SIZES) ; do mkdir -p $$d/$$s ; inkscape --without-gui --file=$$F --export-width=$$s --export-height=$$s --export-png=$$d/$$s/$$f.png ; done; done; done
 	for D in aurex-logos/icons/* ; do d=install.aurex-icon-theme/icons/$${D##*/}; for F in $$D/*.alias; do fbase=$${F##*/}; f=$${fbase%.alias}; mkdir -p $$d/scalable; for a in `cat $$F`; do cp $$d/scalable/$$f.svg $$d/scalable/$$a.svg; done; for s in $(ICON_SIZES) ; do mkdir -p $$d/$$s ; for a in `cat $$F`; do cp $$d/$$s/$$f.png $$d/$$s/$$a.png; done; done; done; done
@@ -93,6 +96,7 @@ clean:
 	rm -f debian/aurex-wallpaper-theme.links
 	rm -f grub/*.png
 	rm -rf install.aurex-icon-theme/icons
+	grub-themes/aurex-arch/build-script build
 	space-sunrise/aurex/build-script clean
 	floatinglogo/aurex/build-script clean
 	BlueMint/aurex/build-script clean

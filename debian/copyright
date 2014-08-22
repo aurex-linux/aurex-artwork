@@ -130,6 +130,10 @@ Files: bitmaps/inspiringwallpapers.net-apple_music-1920x1080-1366x768.jpg
 Copyright: Copyright 2013 Paul Mood (http://www.inspiringwallpapers.net)
 License: free (unspecified)
 
+Files: bitmaps/inspiringwallpapers.net-free-wallpaper-mac1-1920x1200.jpg
+Copyright: Copyright 2012 Paul Mood (http://www.inspiringwallpapers.net)
+License: free (unspecified)
+
 Files: install.aurex-icon-theme/icons-static/22x22/apps/nm-*.png
 Copyright: Copyright 2010 Matthieu James <matthieu.james@gmail.com>
 License: GPL-3
@@ -191,6 +195,14 @@ Copyright: Copyright 2012 raoul223 (http://raoul223.deviantart.com/)
 License: CC-nc-by-sa
 
 Files: elementaryOsBlueAviator/aurex/*
+Copyright: Copyright 2014 Luis Antonio Garcia Gisbert <luisgg@gmail.com>
+License: GPL-3+
+
+Files: grub-themes/archlinux/*
+Copyright: Copyright 2012 GutsBlack
+License: GPL-2
+
+Files: grub-themes/aurex-arch/*
 Copyright: Copyright 2014 Luis Antonio Garcia Gisbert <luisgg@gmail.com>
 License: GPL-3+
 

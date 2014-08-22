@@ -19,6 +19,13 @@ case "$1" in
 				cp "$F" $WORK_DIR/install/$f
 			fi
 		done
+		for F in $WORK_DIR/*xcf ; do
+			f="$(basename "$F")"
+			fpng="$(basename "$F" ".xcf").png"
+			if [ ! -r $WORK_DIR/install/$fpng ] ; then
+				xcf2png "$F" > $WORK_DIR/install/$fpng
+			fi
+		done
 		cp $WORK_DIR/*.script $WORK_DIR/*plymouth $WORK_DIR/../*.txt $WORK_DIR/install/
 		;;
 esac

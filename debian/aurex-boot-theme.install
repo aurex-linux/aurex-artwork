@@ -1,2 +1,3 @@
-install.aurex-boot-theme/*	/
-grub/*.png			/usr/share/pixmaps/aurex/
+install.aurex-boot-theme/*		/
+grub/*.png				/usr/share/pixmaps/aurex/
+grub-themes/aurex-arch/install/*	/boot/grub/themes/aurex/

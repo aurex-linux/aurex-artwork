@@ -1,0 +1,26 @@
+#!/bin/sh
+set -e
+WORK_DIR="$(dirname "$0")"
+THEME_DIR="$WORK_DIR/../archlinux"
+IMG_LIST="title background icons/aurex"
+case "$1" in
+	clean)
+		rm -rf $WORK_DIR/install
+		;;
+	*)
+		mkdir $WORK_DIR/install
+		cp -r $THEME_DIR/* install/
+		for f in $XCF_LIST ; do
+			if [ -r "$WORK_DIR/${f}.xcf" ] ; then
+				xcf2png "$WORK_DIR/${f}.xcf" > "$WORK_DIR/install/${f}.png"
+			elif [ -r "$WORK_DIR/${f}.png" ] ; then
+				cp "$WORK_DIR/${f}.png" "$WORK_DIR/install/${f}.png"
+			fi
+
+		done
+		#cp $WORK_DIR/*.script $WORK_DIR/*plymouth $WORK_DIR/README* $WORK_DIR/install/
+		;;
+esac
+
+exit 0
+

@@ -24,7 +24,13 @@ Window.GetMaxHeight = fun (){
 anim.imagecount = 64;
 anim.target_width =  0.5* 0.46 * Window.GetWidth();
 #anim.target_height =  0.5* 0.11 * Window.GetWidth();
-anim.target_height =  0.5* 0.22 * Window.GetWidth();
+#anim.target_height =  0.5* 0.22 * Window.GetWidth();
+anim.target_height =  0.5* 0.28 * Window.GetWidth();
+
+anim_shadow.imagecount = anim.imagecount;
+anim_shadow.target_width =  anim.target_width;
+#anim.target_height =  0.5* 0.11 * Window.GetWidth();
+anim_shadow.target_height = anim.target_height;
 
 fun RotatedImage (index){
 	index = Math.Int(index);
@@ -32,6 +38,14 @@ fun RotatedImage (index){
 		RotatedImageCache[index] = anim.original_image.Rotate((Math.Pi*2*index)/anim.imagecount).Scale(anim.target_width, anim.target_height);
 
 	return RotatedImageCache[index];
+	}
+
+fun RotatedImage_shadow (index){
+	index = Math.Int(index);
+	if (!RotatedImageCache_shadow[index])
+		RotatedImageCache_shadow[index] = anim_shadow.original_image.Rotate((Math.Pi*2*index)/anim_shadow.imagecount).Scale(anim_shadow.target_width, anim_shadow.target_height);
+
+	return RotatedImageCache_shadow[index];
 	}
 
 
@@ -52,9 +66,22 @@ else {
   anim.sprite = SpriteNew();
   anim.sprite.SetImage(RotatedImage (0));
   anim.sprite.SetX((Window.GetX() + Window.GetWidth() - RotatedImage(0).GetWidth()) / 2);
-  anim.sprite.SetY(Window.GetY() + Window.GetHeight() * 0.50);
+  anim.sprite.SetY(Window.GetY() + Window.GetHeight() * 0.50 - 45);
   anim.angle = 0;
   anim.index = 0;
+
+  anim_shadow.image= ImageNew("animation-shadow.png");
+  anim_shadow.original_image= anim_shadow.image.Scale(anim_shadow.target_width, anim_shadow.target_width);
+
+  anim_shadow.sprite = SpriteNew();
+  anim_shadow.sprite.SetImage(RotatedImage_shadow (0));
+  anim_shadow.sprite.SetX((Window.GetX() + Window.GetWidth() - RotatedImage_shadow(0).GetWidth()) / 2);
+  anim_shadow.sprite.SetY(Window.GetY() + Window.GetHeight() * 0.50);
+  anim_shadow.sprite.SetZ(-5);
+  anim_shadow.angle = 0;
+  anim_shadow.index = 0;
+
+  #back2.original_image = ImageNew("background2.png");
 
  
 }
@@ -73,6 +100,11 @@ background.sprite = SpriteNew();
 background.sprite.SetImage(background.image);
 background.sprite.SetPosition(Window.GetX(), Window.GetY(), -10);
 
+#back2.image = back2.original_image.Scale(Window.GetMaxWidth() , 0.22*Window.GetMaxHeight());
+#back2.sprite = SpriteNew();
+#back2.sprite.SetImage(back2.image);
+#back2.sprite.SetPosition(Window.GetX(), Window.GetY() + 80, -5);
+
 sprite_prompt = SpriteNew();
 
 fun refresh_callback ()
@@ -82,12 +114,17 @@ fun refresh_callback ()
 	anim.index += 1;
 	anim.index %= anim.imagecount;
 	anim.sprite.SetImage(RotatedImage (anim.index));
+
+	anim_shadow.index += 1;
+	anim_shadow.index %= anim_shadow.imagecount;
+	anim_shadow.sprite.SetImage(RotatedImage_shadow (anim_shadow.index));
         #anim.sprite.SetOpacity (1);
 	motif.sprite.SetOpacity(motif.opacity);
       }
     else
       {
         anim.sprite.SetOpacity(0);
+        anim_shadow.sprite.SetOpacity(0);
 	motif.sprite.SetOpacity(0);
       }
 
@@ -172,6 +209,7 @@ fun display_password_callback (prompt, bullets)
 	dialog_opacity(1);
     motif.sprite.SetOpacity(0);
     anim.sprite.SetOpacity(0);
+    anim_shadow.sprite.SetOpacity(0);
 	
     dialog.prompt_sprite.SetImage(Image.Text(prompt, 1.0, 1.0, 1.0));
     for (index = 0; dialog.bullet[index] || index < bullets; index++)
@@ -239,6 +277,7 @@ Plymouth.SetBootProgressFunction(progress_callback);
 fun quit_callback ()
 {
  anim.sprite.SetOpacity (0);
+ anim_shadow.sprite.SetOpacity (0);
   if (Plymouth.GetMode() == "shutdown") {
    motif.sprite.SetOpacity(0);
   }
