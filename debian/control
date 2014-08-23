@@ -7,7 +7,7 @@ Standards-Version: 3.8.4
 
 Package: aurex-gtk-theme
 Architecture: all
-Depends: ${misc:Depends}, greybird-gtk-theme, radiance-colors, aurex-icon-theme, aurex-wallpaper-theme, aurex-icon-theme
+Depends: ${misc:Depends}, greybird-gtk-theme, radiance-colors, aurex-icon-theme, aurex-wallpaper-theme, aurex-icon-theme, aurex-transmute
 #, gnome-screensaver, aurex-gdm-theme
 Description: Aurex 14.04 theme
  AureX full theme for GNOME/XFCE

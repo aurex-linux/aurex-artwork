@@ -2,15 +2,15 @@
 
 case "$1" in
     configure)
-	# link zoncolorLittle theme
+	# link Radiance-Graphite theme
 	for d in metacity-1 xfwm4 ; do
 		mkdir -p /usr/share/themes/aurex/$d
-		cp -aus /usr/share/themes/zoncolorLittle/$d/* /usr/share/themes/aurex/$d
+		cp -aus /usr/share/themes/Radiance-Graphite/$d/* /usr/share/themes/aurex/$d
 	done
-	# link Radiance-Dark-Panel gtk theme
-	for d in gtk-2.0 gtk-3.0 unity ; do
+	# link GreyBird
+	for d in gtk-2.0 gtk-3.0 unity xfce-notify-4.0 ; do
 		mkdir -p /usr/share/themes/aurex/$d
-		cp -aus /usr/share/themes/Radiance-Dark-Panel/$d/* /usr/share/themes/aurex/$d
+		cp -aus /usr/share/themes/Greybird/$d/* /usr/share/themes/aurex/$d
 	done
 	# Add/replace custom files
 	aurex-transmute --module=gtk-theme transmute || true
