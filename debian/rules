@@ -100,8 +100,8 @@ clean:
 	grub-themes/aurex-arch/build-script clean
 	space-sunrise/aurex/build-script clean
 	floatinglogo/aurex/build-script clean
-	BlueMint/aurex/build-script clean
-	Simply_Grace/aurex/build-script clean
+	#BlueMint/aurex/build-script clean
+	#Simply_Grace/aurex/build-script clean
 	rm -rf install.fatcli-mdm
 	rm -rf install.translive
 	rm -rf install.aurex-ubiquity-theme
