@@ -9,7 +9,7 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-ICON_SIZES =  16  22  24  32  48
+ICON_SIZES = 16  24  32  48  64  96 128
 UBIQUITY_BASEDIR = install.aurex-ubiquity-theme/usr/share/aurex-transmute/ubiquity-theme/divert
 
 configure:configure-stamp
@@ -80,7 +80,8 @@ build-stamp: configure-stamp
 	# generate lightdm images
 	mkdir -p install.aurex-lightdm/unity-greeter
 	# xcf2png aurex-logos/aurex-mdm-simply.xcf > install.aurex-lightdm/unity-greeter/aurex-background.png
-	xcf2png aurex-logos/aurex-lightdm.xcf > install.aurex-lightdm/unity-greeter/aurex-background.png
+	#xcf2png aurex-logos/aurex-lightdm.xcf > install.aurex-lightdm/unity-greeter/aurex-background.png
+	xcf2png iwallpapers/aurex-color.xcf > install.aurex-lightdm/unity-greeter/aurex-background.png
 	xcf2png aurex-logos/custom_aurex_badge.xcf > install.aurex-lightdm/unity-greeter/custom_aurex_badge.png
 	inkscape --without-gui --file=aurex-logos/aurex-14.04.svg --export-width=245 --export-png=install.aurex-lightdm/unity-greeter/aurex-logo.png
 

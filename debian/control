@@ -14,7 +14,7 @@ Description: Aurex 14.04 theme
 
 Package: aurex-icon-theme
 Architecture: all
-Depends: ${misc:Depends}, aurex-transmute, flatwoken-icon-theme, rsync
+Depends: ${misc:Depends}, aurex-transmute, flatwoken-icon-theme, xubuntu-icon-theme, rsync, libgtk2.0-bin
 Description: Aurex 14.04 icon theme
  AureX icon theme based on FlatWoken
 

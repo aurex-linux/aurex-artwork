@@ -2,46 +2,47 @@
 
 case "$1" in
     configure)
-	# link potenza icon theme
-	cp -aus /usr/share/icons/potenza/* /usr/share/icons/aurex
-	# replace status icons
-	STATUS_DIR="/usr/share/icons/potenza-dark/status"
-	for d in $(ls $STATUS_DIR 2>/dev/null) ; do
-		if [ -d "$STATUS_DIR/$d" ] && [ -d "/usr/share/icons/aurex/${d}x${d}/status" ] ; then
-			rsync -a "$STATUS_DIR/$d/" "/usr/share/icons/aurex/${d}x${d}/status/" || true
-		fi
+	# link elementary-xfce-dark
+	for d in apps panel ; do
+		cp -aus /usr/share/icons/elementary-xfce-dark/$d/* /usr/share/icons/aurex/$d/
 	done
+#	# replace status icons
+#	STATUS_DIR="/usr/share/icons/potenza-dark/status"
+#	for d in $(ls $STATUS_DIR 2>/dev/null) ; do
+#		if [ -d "$STATUS_DIR/$d" ] && [ -d "/usr/share/icons/aurex/${d}x${d}/status" ] ; then
+#			rsync -a "$STATUS_DIR/$d/" "/usr/share/icons/aurex/${d}x${d}/status/" || true
+#		fi
+#	done
 	# Generate index.theme
-	TMPFILE="$(tempfile)"
-	cp -a /usr/share/icons/potenza/index.theme $TMPFILE
-	sed -i -e "s%^Name=.*$%Name=aurex%;s%^Comment=.*$%Comment=aurex potenza Icon theme%" $TMPFILE
-	mv -f $TMPFILE /usr/share/icons/aurex/index.theme
+	#cp /usr/share/aurex-icon-theme/index.thme /usr/share/icons/aurex/
+
+	# Add/replace custom files and replace user and avatar icons with FlatWoken ones
+	USER_ICON="/usr/share/icons/FlatWoken/scalable/apps/user.svg"
+	ICON_DIR="/usr/share/icons/aurex/apps"
+
 	# Add/replace custom files
 	aurex-transmute --module=icon-theme transmute || true
 	# link distributor-logo/start-here icons to aurex
 	#PLACES_DIR="/usr/share/icons/aurex/places/"
-	ICON_DIR="/usr/share/icons/aurex/"
 	for d in $(ls $ICON_DIR 2>/dev/null) ; do
-		PLACES_DIR="$ICON_DIR/$d/places"
-		APPS_DIR="$ICON_DIR/$d/apps"
-		if [ -d "$PLACES_DIR" ] ; then
-			for t in png svg ; do
-				if [ -r $PLACES_DIR/distributor-logo-aurex.$t ] ; then
-					ln -fs $PLACES_DIR/distributor-logo-aurex.$t $PLACES_DIR/distributor-logo.$t
-					ln -fs $PLACES_DIR/distributor-logo-aurex.$t $PLACES_DIR/xubuntu-logo.$t
-					ln -fs $PLACES_DIR/distributor-logo-aurex.$t $PLACES_DIR/xubuntu-logo-menu.$t
-					[ -r $PLACES_DIR/start-here-aurex.$t ] || ln -fs $PLACES_DIR/distributor-logo-aurex.$t $PLACES_DIR/start-here-aurex.$t
-					ln -fs $PLACES_DIR/start-here-aurex.$t $PLACES_DIR/start-here.$t
-					if [ -d "$APPS_DIR" ]; then
-						[ -r $APPS_DIR/xfce4-whiskermenu-aurex.$t ] || ln -fs $PLACES_DIR/distributor-logo-aurex.$t $APPS_DIR/xfce4-whiskermenu-aurex.$t
-						ln -fs $APPS_DIR/xfce4-whiskermenu-aurex.$t $APPS_DIR/xfce4-whiskermenu.$t
-						[ -r $APPS_DIR/xfce4-panel-menu-aurex.$t ] || ln -fs $PLACES_DIR/distributor-logo-aurex.$t $APPS_DIR/xfce4-panel-menu-aurex.$t
-						ln -fs $APPS_DIR/xfce4-panel-menu-aurex.$t $APPS_DIR/xfce4-panel-menu.$t
-					fi
-				fi
-			done
-		fi
+		for f in user.svg avatar-default.svg avatar-default-symbolic.svg ; do
+			ln -s $USER_ICON $ICON_DIR/$d/$f
+		done
+		for t in png svg ; do
+			if [ -r $ICON_DIR/$d/distributor-logo-aurex.$t ] ; then
+				for n in distributor-logo xubuntu-logo xubuntu-logo-menu ; do
+					ln -fs $ICON_DIR/$d/distributor-logo-aurex.$t $ICON_DIR/$d/$n.$t
+				done
+			fi
+			[ -r $ICON_DIR/$d/start-here-aurex.$t ] || ln -fs $ICON_DIR/$d/distributor-logo-aurex.$t $ICON_DIR/$d/start-here-aurex.$t
+			ln -fs $ICON_DIR/$d/start-here-aurex.$t $ICON_DIR/$d/start-here.$t
+			[ -r $ICON_DIR/$d/xfce4-whiskermenu-aurex.$t ] || ln -fs $ICON_DIR/$d/distributor-logo-aurex.$t $ICON_DIR/$d/xfce4-whiskermenu-aurex.$t
+			ln -fs $ICON_DIR/$d/xfce4-whiskermenu-aurex.$t $APPS_DIR/xfce4-whiskermenu.$t
+			[ -r $ICON_DIR/$d/xfce4-panel-menu-aurex.$t ] || ln -fs $ICON_DIR/$d/distributor-logo-aurex.$t $ICON_DIR/$d/xfce4-panel-menu-aurex.$t
+			ln -fs $ICON_DIR/$d/xfce4-panel-menu-aurex.$t $ICON_DIR/$d/xfce4-panel-menu.$t
+		done
 	done
+	gtk-update-icon-cache -tf /usr/share/icons/aurex || true
 	;;
     abort-upgrade|abort-remove|abort-deconfigure)
     	;;
