@@ -3,6 +3,8 @@ set -e
 WORK_DIR="$(dirname "$0")"
 THEME_DIR="$WORK_DIR/../archlinux"
 IMG_LIST="title background icons/aurex"
+
+echo ">>>$WORK_DIR<<<<"
 case "$1" in
 	clean)
 		rm -rf $WORK_DIR/install
