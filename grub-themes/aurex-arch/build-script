@@ -14,8 +14,10 @@ case "$1" in
 		cp -r $THEME_DIR/* $WORK_DIR/install/
 		for f in $XCF_LIST ; do
 			if [ -r "$WORK_DIR/${f}.xcf" ] ; then
+				echo ">>$WORK_DIR/${f}.xcf"
 				xcf2png "$WORK_DIR/${f}.xcf" > "$WORK_DIR/install/${f}.png"
 			elif [ -r "$WORK_DIR/${f}.png" ] ; then
+				echo ">>$WORK_DIR/${f}.png"
 				cp "$WORK_DIR/${f}.png" "$WORK_DIR/install/${f}.png"
 			fi
 
