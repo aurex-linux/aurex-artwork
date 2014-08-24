@@ -97,7 +97,7 @@ clean:
 	rm -f debian/aurex-wallpaper-theme.links
 	rm -f grub/*.png
 	rm -rf install.aurex-icon-theme/icons
-	grub-themes/aurex-arch/build-script build
+	grub-themes/aurex-arch/build-script clean
 	space-sunrise/aurex/build-script clean
 	floatinglogo/aurex/build-script clean
 	BlueMint/aurex/build-script clean
