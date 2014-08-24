@@ -4,7 +4,6 @@ WORK_DIR="$(dirname "$0")"
 THEME_DIR="$WORK_DIR/../archlinux"
 IMG_LIST="title background icons/aurex"
 
-echo ">>>$WORK_DIR<<<<"
 case "$1" in
 	clean)
 		rm -rf $WORK_DIR/install
@@ -12,7 +11,7 @@ case "$1" in
 	*)
 		mkdir -p $WORK_DIR/install
 		cp -r $THEME_DIR/* $WORK_DIR/install/
-		for f in $XCF_LIST ; do
+		for f in $IMG_LIST ; do
 			if [ -r "$WORK_DIR/${f}.xcf" ] ; then
 				echo ">>$WORK_DIR/${f}.xcf"
 				xcf2png "$WORK_DIR/${f}.xcf" > "$WORK_DIR/install/${f}.png"

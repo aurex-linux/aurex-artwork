@@ -1,3 +1,9 @@
+aurex-artwork (14.04.2) trusty; urgency=medium
+
+  * Tons of bugs fixed
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Sun, 24 Aug 2014 17:45:37 +0200
+
 aurex-artwork (14.04.1) trusty; urgency=medium
 
   * Updated for trusty
