@@ -8,8 +8,8 @@ case "$1" in
 		rm -rf $WORK_DIR/install
 		;;
 	*)
-		mkdir $WORK_DIR/install
-		cp -r $THEME_DIR/* install/
+		mkdir -p $WORK_DIR/install
+		cp -r $THEME_DIR/* $WORK_DIR/install/
 		for f in $XCF_LIST ; do
 			if [ -r "$WORK_DIR/${f}.xcf" ] ; then
 				xcf2png "$WORK_DIR/${f}.xcf" > "$WORK_DIR/install/${f}.png"
