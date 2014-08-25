@@ -37,7 +37,7 @@ case "$1" in
 			[ -r $ICON_DIR/$d/start-here-aurex.$t ] || ln -fs $ICON_DIR/$d/distributor-logo-aurex.$t $ICON_DIR/$d/start-here-aurex.$t
 			ln -fs $ICON_DIR/$d/start-here-aurex.$t $ICON_DIR/$d/start-here.$t
 			[ -r $ICON_DIR/$d/xfce4-whiskermenu-aurex.$t ] || ln -fs $ICON_DIR/$d/distributor-logo-aurex.$t $ICON_DIR/$d/xfce4-whiskermenu-aurex.$t
-			ln -fs $ICON_DIR/$d/xfce4-whiskermenu-aurex.$t $APPS_DIR/xfce4-whiskermenu.$t
+			ln -fs $ICON_DIR/$d/xfce4-whiskermenu-aurex.$t $ICON_DIR/$d/xfce4-whiskermenu.$t
 			[ -r $ICON_DIR/$d/xfce4-panel-menu-aurex.$t ] || ln -fs $ICON_DIR/$d/distributor-logo-aurex.$t $ICON_DIR/$d/xfce4-panel-menu-aurex.$t
 			ln -fs $ICON_DIR/$d/xfce4-panel-menu-aurex.$t $ICON_DIR/$d/xfce4-panel-menu.$t
 		done

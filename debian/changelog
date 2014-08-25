@@ -1,3 +1,9 @@
+aurex-artwork (14.04.3) trusty; urgency=medium
+
+  * Fixed whiskermenu icon
+
+ -- lgarcia <lgarcia@aurex-trusty>  Mon, 25 Aug 2014 20:28:14 +0200
+
 aurex-artwork (14.04.2) trusty; urgency=medium
 
   * Tons of bugs fixed
