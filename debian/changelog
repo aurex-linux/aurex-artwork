@@ -1,3 +1,9 @@
+aurex-artwork (14.04.5) trusty; urgency=medium
+
+  * resize_grip correctly installed
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Tue, 26 Aug 2014 12:04:09 +0200
+
 aurex-artwork (14.04.4) trusty; urgency=medium
 
   * Fixed reinstallation of aurex-gtk-icon-theme
