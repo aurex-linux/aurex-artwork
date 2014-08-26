@@ -4,7 +4,9 @@ case "$1" in
     configure)
 	aurex-transmute --module=lightdm transmute || true
 	glib-compile-schemas /usr/share/glib-2.0/schemas/ || true
-	/usr/lib/lightdm/lightdm-set-defaults -g unity-greeter -s aurex -m true || true
+#       lightdm-set-defaults removed in 14.04
+#	and replaced with custom configuration files in /etc/lightdm/lightdm.conf.d
+#	/usr/lib/lightdm/lightdm-set-defaults -g unity-greeter -s aurex -m true || true
 	;;
     abort-upgrade|abort-remove|abort-deconfigure)
     	;;

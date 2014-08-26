@@ -6,13 +6,13 @@ case "$1" in
 	for d in metacity-1 xfwm4 ; do
 		rm -fr /usr/share/themes/aurex/$d
 		mkdir -p /usr/share/themes/aurex/$d
-		cp -aus /usr/share/themes/Radiance-Graphite/$d/* /usr/share/themes/aurex/$d
+		cp -a /usr/share/themes/Radiance-Graphite/$d/* /usr/share/themes/aurex/$d
 	done
 	# link GreyBird
 	for d in gtk-2.0 gtk-3.0 unity xfce-notify-4.0 ; do
 		rm -fr /usr/share/themes/aurex/$d
 		mkdir -p /usr/share/themes/aurex/$d
-		cp -aus /usr/share/themes/Greybird/$d/* /usr/share/themes/aurex/$d
+		cp -a /usr/share/themes/Greybird/$d/* /usr/share/themes/aurex/$d
 	done
 	# Add/replace custom files
 	aurex-transmute --module=gtk-theme transmute || true
