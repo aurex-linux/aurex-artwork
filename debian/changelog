@@ -1,3 +1,9 @@
+aurex-artwork (14.04.6) trusty; urgency=medium
+
+  * Updated translive theme
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Sun, 31 Aug 2014 17:35:01 +0200
+
 aurex-artwork (14.04.5) trusty; urgency=medium
 
   * resize_grip correctly installed
