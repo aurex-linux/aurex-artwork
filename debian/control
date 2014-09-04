@@ -24,11 +24,11 @@ Depends: ${misc:Depends}
 Description: Aurex 14.04 wallpaper theme
  AureX wallpaper theme
 
-Package: aurex-boot-theme
+Package: aurex-boot-theme-graphics
 Architecture: all
-Depends: ${misc:Depends}, aurex-transmute, grub-pc, aurex-nice-boot-settings | aurex-boot-settings
-Description: Aurex 14.04 GRUB theme
- AureX grub2 theme
+Depends: ${misc:Depends}
+Description: Graphics for aurex 14.04 GRUB theme
+ AureX grub2 theme (graphics files)
 
 Package: aurex-plymouth-theme
 Architecture: all

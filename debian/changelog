@@ -1,3 +1,12 @@
+aurex-artwork (14.04.7) trusty; urgency=medium
+
+  * Restructuration of aurex grub artwork and configuration files:
+      - new binary package: aurex-boot-theme-graphics : artwork
+      - aurex-boot-theme binary: only grub configuration directives,
+        moved to 'aurex-settings' source package
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Fri, 05 Sep 2014 00:59:59 +0200
+
 aurex-artwork (14.04.6) trusty; urgency=medium
 
   * Updated translive theme
