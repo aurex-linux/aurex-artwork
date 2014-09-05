@@ -1,2 +1,2 @@
-grub/*.png				/usr/share/pixmaps/aurex/
-grub-themes/aurex-arch/install/*	/boot/grub/themes/aurex/
+grub/*.png				/usr/share/aurex-transmute/boot-theme/base-files/usr/share/pixmaps/aurex/
+grub-themes/aurex-arch/install/*	/usr/share/aurex-transmute/boot-theme/base-files/boot/grub/themes/aurex/
