@@ -1,5 +1,11 @@
 aurex-artwork (14.04.8) trusty; urgency=medium
 
+  * Added new binary package 'aurex-unplugged-theme'
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Tue, 03 Nov 2015 17:12:30 +0100
+
+aurex-artwork (14.04.8) trusty; urgency=medium
+
   * Fixed update problems form old versions of aurex-theme
 
  -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Fri, 05 Sep 2014 14:22:15 +0200

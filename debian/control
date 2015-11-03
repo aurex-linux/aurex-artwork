@@ -58,3 +58,9 @@ Description: Aurex artwork for lightdm display manager
  This package provides aurex branding and configuration for
  lightdm display manager using unity-greeter
 
+Package: aurex-unplugged-theme
+Architecture: all
+Depends: ${misc:Depends}, aurex-transmute, lightdm
+Description: Aurex artwork for unplugged status
+ This package provides additional aurex branding
+

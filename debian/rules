@@ -78,9 +78,13 @@ build-stamp: configure-stamp
 	inkscape --without-gui --file=aurex-logos/icons/apps/distributor-logo-aurex.svg --export-width=96 --export-height=96 --export-png=install.aurex-gtk-theme/faces/aurex.png
 
 	# generate lightdm images
-	mkdir -p install.aurex-lightdm/unity-greeter
+	mkdir -p install.aurex-unplugged/divert-share/unity-greeter
+	mkdir -p install.aurex-unplugged/divert-share/backgrounds
+	xcf2png wallpapers/aurex-color-unplugged.xcf > install.aurex-unplugged/divert-share/unity-greeter/aurex-background.png
+	xcf2png wallpapers/aurex-color-unplugged.xcf > install.aurex-unplugged/divert-share/backgrounds/aurex-color.png
 	# xcf2png aurex-logos/aurex-mdm-simply.xcf > install.aurex-lightdm/unity-greeter/aurex-background.png
 	#xcf2png aurex-logos/aurex-lightdm.xcf > install.aurex-lightdm/unity-greeter/aurex-background.png
+	mkdir -p install.aurex-lightdm/unity-greeter
 	xcf2png wallpapers/aurex-color.xcf > install.aurex-lightdm/unity-greeter/aurex-background.png
 	xcf2png aurex-logos/custom_aurex_badge.xcf > install.aurex-lightdm/unity-greeter/custom_aurex_badge.png
 	inkscape --without-gui --file=aurex-logos/aurex-14.04.svg --export-width=245 --export-png=install.aurex-lightdm/unity-greeter/aurex-logo.png
@@ -107,6 +111,7 @@ clean:
 	rm -rf install.aurex-ubiquity-theme
 	rm -rf install.aurex-gtk-theme/faces
 	rm -fr install.aurex-lightdm/unity-greeter
+	rm -fr install.aurex-unplugged/divert-share
 	dh_clean
 
 install: build
